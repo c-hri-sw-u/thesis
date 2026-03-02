@@ -1,0 +1,104 @@
+{
+  "name": "thesis-commands",
+  "description": "Routing commands to thesis AI team subagents in Discord",
+  "version": "1.0.0",
+  "author": "OpenClaw",
+  "settings": {
+    "discord_channel": "#thesis",
+    "channel_id": "1467996685291618406"
+  },
+  "commands": {
+    "pm": {
+      "name": "pm",
+      "description": "Project Manager - timeline, progress, deadlines",
+      "subagent": "thesis-pm",
+      "prompt_file": "/Users/mia/.openclaw/workspace/thesis/team/prompts/pm.txt"
+    },
+    "research": {
+      "name": "research",
+      "description": "Research Lead - papers, literature review, gaps",
+      "subagent": "thesis-research",
+      "prompt_file": "/Users/mia/.openclaw/workspace/thesis/team/prompts/research.txt"
+    },
+    "tech": {
+      "name": "tech",
+      "description": "Technical Lead - system design, implementation, feasibility",
+      "subagent": "thesis-tech",
+      "prompt_file": "/Users/mia/.openclaw/workspace/thesis/team/prompts/tech.txt"
+    },
+    "hci": {
+      "name": "hci",
+      "description": "HCI Researcher - user study, privacy, ethics",
+      "subagent": "thesis-hci",
+      "prompt_file": "/Users/mia/.openclaw/workspace/thesis/team/prompts/hci.txt"
+    },
+    "da": {
+      "name": "da",
+      "description": "Devil's Advocate - critique, alternatives, risks",
+      "subagent": "thesis-da",
+      "prompt_file": "/Users/mia/.openclaw/workspace/thesis/team/prompts/da.txt"
+    },
+    "notes": {
+      "name": "notes",
+      "description": "Note-taker - summarize, extract actions, track decisions",
+      "subagent": "thesis-notes",
+      "prompt_file": "/Users/mia/.openclaw/workspace/thesis/team/prompts/notes.txt"
+    },
+    "standup": {
+      "name": "standup",
+      "description": "Trigger daily standup with all team members",
+      "type": "utility",
+      "action": "run_daily_standup"
+    },
+    "status": {
+      "name": "status",
+      "description": "Show overall thesis progress",
+      "type": "utility",
+      "action": "show_status"
+    },
+    "team": {
+      "name": "team",
+      "description": "List all team members and roles",
+      "type": "utility",
+      "action": "show_team"
+    },
+    "help": {
+      "name": "help",
+      "description": "Show command reference",
+      "type": "utility",
+      "action": "show_help"
+    }
+  },
+  "subagents": {
+    "thesis-pm": {
+      "label": "thesis-pm",
+      "name": "Project Manager",
+      "prompt_file": "/Users/mia/.openclaw/workspace/thesis/team/prompts/pm.txt"
+    },
+    "thesis-research": {
+      "label": "thesis-research",
+      "name": "Research Lead",
+      "prompt_file": "/Users/mia/.openclaw/workspace/thesis/team/prompts/research.txt"
+    },
+    "thesis-tech": {
+      "label": "thesis-tech",
+      "name": "Technical Lead",
+      "prompt_file": "/Users/mia/.openclaw/workspace/thesis/team/prompts/tech.txt"
+    },
+    "thesis-hci": {
+      "label": "thesis-hci",
+      "name": "HCI Researcher",
+      "prompt_file": "/Users/mia/.openclaw/workspace/thesis/team/prompts/hci.txt"
+    },
+    "thesis-da": {
+      "label": "thesis-da",
+      "name": "Devil's Advocate",
+      "prompt_file": "/Users/mia/.openclaw/workspace/thesis/team/prompts/da.txt"
+    },
+    "thesis-notes": {
+      "label": "thesis-notes",
+      "name": "Note-taker",
+      "prompt_file": "/Users/mia/.openclaw/workspace/thesis/team/prompts/notes.txt"
+    }
+  }
+}
