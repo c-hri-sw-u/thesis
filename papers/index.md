@@ -181,42 +181,73 @@
 
 ---
 
+## 🔥 NEW ADDITIONS (2026-03-03 Research Update)
+
+### Category 2.5: Recent Multimodal Life Logging Systems
+
+| # | Paper | Authors | Year | Venue | Direction | Status |
+|---|-------|---------|------|-------|-----------|--------|
+| 2.5.1 | EgoLog: Ego-Centric Fine-Grained Daily Log with Ubiquitous Wearables | He et al. | 2026 | arXiv | Audio-IMU fusion, on-device KWS | ✅ Found - HIGH RELEVANCE |
+| 2.5.2 | EgoPrivacy: What Your First-Person Camera Says About You? | Cheng et al. | 2025 | ICML | Privacy benchmark, 70-80% attribute recovery | ✅ Found - HIGH RELEVANCE |
+
+### Category 3.5: Recent Multimodal Memory Systems
+
+| # | Paper | Authors | Year | Venue | Direction | Status |
+|---|-------|---------|------|-------|-----------|--------|
+| 3.5.1 | MIRIX: Multi-Agent Memory System for LLM-Based Agents | Wang et al. | 2025 | arXiv | 6 memory types, multimodal, local storage | ✅ Found - HIGH RELEVANCE |
+| 3.5.2 | M3-Agent: A Multimodal Agent with Long-Term Memory | He et al. (ByteDance) | 2025 | arXiv | Entity-centric, RL training, M3-Bench | ✅ Found - HIGH RELEVANCE |
+| 3.5.3 | TeleMem: Building Long-Term and Multimodal Memory for Agentic AI | Chen et al. | 2026 | arXiv | Narrative extraction, ReAct reasoning | ✅ Found - HIGH RELEVANCE |
+| 3.5.4 | A-MEM: Agentic Memory for LLM Agents | Xu et al. | 2025 | NeurIPS | Zettelkasten-inspired, memory evolution | ✅ Found - HIGH RELEVANCE |
+| 3.5.5 | Memoria: A Scalable Agentic Memory Framework | | 2025 | arXiv | Personalized conversational AI | ✅ Found |
+| 3.5.6 | WorldMM: Dynamic Multimodal Memory Agent for Long Video | | 2025 | arXiv | Long video reasoning | ✅ Found |
+
+### Category 5.5: Recent Privacy-Preserving Systems
+
+| # | Paper | Authors | Year | Venue | Direction | Status |
+|---|-------|---------|------|-------|-----------|--------|
+| 5.5.1 | Extra-Lightweight AI-Based Privacy Preserving Framework | Li et al. | 2025 | CVPR Workshop | On-device privacy | ✅ Found |
+
+---
+
 ## Summary by Status
 
 | Status | Count |
 |--------|-------|
-| 🔍 To Find | 45 |
+| 🔍 To Find | 38 |
 | 📖 To Read | 3 |
-| ✅ Read | 0 |
+| ✅ Found (New) | 8 |
+| ✅ Found (Previous) | 3 |
 
-**Total Papers:** 48
-
----
-
-## Priority Reading List (Top 10)
-
-1. Ego4D (Grauman et al., 2022) - Category 1
-2. MemGPT (2023) - Category 3
-3. SenseCam (Hodges et al., 2006) - Category 7
-4. MDGEAR (Papadakis & Spyrou, 2024) - Category 2
-5. Real-time face obfuscation (USENIX/CCS, 2023) - Category 5
-6. Energy-efficient mobile sensing (MobiSys, 2023) - Category 6
-7. Privacy perceptions in wearables (CHI, 2023) - Category 7
-8. Mem0 (2024) - Category 3
-9. Adaptive data collection (UbiComp, 2023) - Category 6
-10. On-device ML for privacy (MobiSys, 2023) - Category 5
+**Total Papers:** 52 (+4 new high-relevance papers)
 
 ---
 
-## Next Steps
+## 🚨 UPDATED Priority Reading List (Top 10)
 
-1. Search and download high-priority papers
-2. Create individual summary files for each paper
-3. Update status as papers are read
-4. Extract key techniques and findings
-5. Build related work draft from summaries
+1. **EgoLog (He et al., 2026)** - Category 2.5 - CRITICAL: Closest to our thesis
+2. **MIRIX (Wang et al., 2025)** - Category 3.5 - CRITICAL: Best multimodal memory
+3. **EgoPrivacy (Cheng et al., 2025)** - Category 2.5 - CRITICAL: Privacy benchmark
+4. **M3-Agent (ByteDance, 2025)** - Category 3.5 - HIGH: Industry baseline
+5. **TeleMem (Chen et al., 2026)** - Category 3.5 - HIGH: SOTA comparison
+6. **A-MEM (Xu et al., NeurIPS 2025)** - Category 3.5 - HIGH: Memory evolution
+7. Ego4D (Grauman et al., 2022) - Category 1 - Dataset foundation
+8. MemGPT (2023) - Category 3 - Memory architecture
+9. MemVerse (2025) - Collected - Multimodal memory
+10. Memory Survey (2025) - Collected - Comprehensive overview
 
 ---
 
-*Last updated: 2026-02-09*
-*Next update: After paper collection*
+## Next Steps (Updated 2026-03-03)
+
+1. **URGENT:** Read EgoLog - overlaps with thesis scope, need to differentiate
+2. **URGENT:** Read MIRIX - evaluate six-memory architecture for adoption
+3. **HIGH:** Read EgoPrivacy - use benchmark for privacy evaluation
+4. Search and download remaining high-priority papers
+5. Create individual summary files for each paper
+6. Update status as papers are read
+7. Build related work draft from summaries
+
+---
+
+*Last updated: 2026-03-03*
+*Research Lead: Subagent Update*
