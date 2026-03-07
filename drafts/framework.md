@@ -12,11 +12,11 @@
 
 ## Research Questions
 
-**RQ1:** How can [system name] be designed to enable continuous ego-centric life logging with privacy-by-design?
+**RQ1:** How can we design a privacy-preserving life logging system that enables **understanding beyond classification**, with queryable, retrievable, and reasoning-capable personal memory?
 
-**RQ2:** What is the lived experience of using a personal life logging system over time?
+**RQ2:** What is the lived experience of using a personalized life logging agent over a longitudinal self-study, particularly regarding privacy concerns, memory utility, and agent integration?
 
-**RQ3:** What design lessons can be derived from this dual technical and experiential investigation?
+**RQ3:** What design implications emerge from the intersection of cognitive memory theory, agent personalization, and embodied life logging practice?
 
 ---
 
@@ -24,11 +24,23 @@
 
 This thesis makes the following contributions:
 
-1. **System Artifact:** [System name], an end-to-end life logging system that enables continuous capture, privacy-preserving processing, and memory-based agent integration
+1. **System Artifact:** A privacy-first life logging system that integrates:
+   - **Understanding beyond classification** (vs EgoLog's HAR focus)
+   - **Proactive agent integration** (vs passive recording systems)
+   - **Multi-dimensional memory** (episodic + semantic + user profile)
+   - **Privacy-by-design** (on-device processing, user control)
 
-2. **Empirical Findings:** Insights from a 7-day self-study revealing key themes about long-term usage patterns, privacy concerns, and agent integration
+2. **Empirical Findings:** Insights from a longitudinal self-study revealing:
+   - Long-term usage patterns and privacy concerns
+   - Memory retrieval effectiveness and limitations
+   - Agent integration challenges and opportunities
+   - Cognitive load management strategies
 
-3. **Design Implications:** Guidelines for privacy-preserving life logging system design based on the synthesis of technical and experiential perspectives
+3. **Design Implications:** Guidelines for personalized life logging agents:
+   - Memory architecture design (ephemeral vs durable, episodic vs semantic)
+   - Personalization strategies (know vs do, input vs model vs objective)
+   - Self-study methodology (legitimacy strategies, rigor requirements)
+   - Privacy-utility trade-offs in practice
 
 ---
 
@@ -57,25 +69,40 @@ This thesis makes the following contributions:
 
 ### 2. Background & Related Work (3-4 pages)
 
-#### 2.1 Technical Domain
-- **Life Logging Systems:** Ego4D, MyLifeBits, EgoLog
-- **Activity Recognition:** Egocentric video analysis, multimodal fusion
-- **Privacy-Preserving Systems:** On-device processing, differential privacy
+#### 2.1 Life Logging Systems
+- **Classic:** MyLifeBits (2000s) - Foundation of life logging
+- **Modern:** EgoLog (2026) - HAR-focused, continuous tracking + multimodal sensing
+- **Limitation:** Classification-focused, limited understanding and agent integration
 
-#### 2.2 Memory Systems for AI Agents
-- **Personal Memory:** MIRIX, MemGPT, M3-Agent
-- **Memory Architecture:** Short-term vs long-term, episodic vs semantic
-- **Retrieval Mechanisms:** RAG, embedding-based search
+#### 2.2 Personalized LLMs & Agents
+- **PLLM Taxonomy** (2025): Input Level (prompting), Model Level (adaptation), Objective Level (alignment)
+- **PRIME** (2025): Cognitive dual-memory (episodic + semantic) + personalized thinking
+- **Persistent Memory Systems** (2025): STM → summaries → LTM → user profile pipeline
+- **Personalized Agents** (2026): Profile modeling, memory, planning, action execution
 
-#### 2.3 Autoethnographic & Self-Study Methods in HCI
-- **Autobiographical Design:** Neustaedter & Sengers (2012)
-- **Personal Informatics:** Quantified Self movement
-- **Self-Study Validity:** Rigor through reflexivity and transparency
+#### 2.3 Embodied Agent Memory
+- **MEMENTO** (2026): Knowledge graph-based user profile to address information overload
+- **Generative Agents** (2023): Memory stream + reflection architecture
+- **MemGPT** (2023): Virtual context management, self-editing memory
+- **Modern Systems:** Mem0 (memory-as-a-service), A-MEM (Zettelkasten-inspired), Memoria (weighted knowledge graphs)
 
-#### 2.4 Research Gap
-- No end-to-end system combining: continuous logging + privacy + agent integration
-- Limited longitudinal self-studies in this domain
-- Gap in understanding lived experience of life logging
+#### 2.4 Cognitive Architectures
+- **Classics:** Soar (1987), ACT-R (1993) - Activation-based retrieval, memory decay
+- **Modern Applications:** OpenClaw's two-tier memory (ephemeral + durable)
+- **Identity Layer:** SOUL.md, USER.md, IDENTITY.md (personality + preferences)
+
+#### 2.5 Autoethnographic Methods
+- **Autobiographical Design:** Neustaedter & Sengers (2012) - Guidelines for self-study validity
+- **Legitimacy Strategies:** Depth over breadth, insider expertise, transparency, rigor, theoretical contribution, artifact creation
+
+#### 2.6 Research Gap
+**Missing in existing work:**
+1. **Long-term self-study** of life logging + agent memory (most are short-term user studies or n=1 demos)
+2. **Integration** of cognitive theory + agent memory + personalization in embodied context
+3. **Privacy-by-design** life logging system with formal evaluation
+4. **Understanding beyond classification** - proactive agent vs passive recorder
+
+**This thesis addresses:** All four gaps through system artifact + longitudinal self-study + design implications
 
 ---
 
