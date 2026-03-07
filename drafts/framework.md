@@ -10,13 +10,76 @@
 
 ---
 
+## Research Direction
+
+### Context & Motivation
+
+**The Rise of Personalized AI Agents:**
+- OpenClaw's爆火代表了AI agent个人化的趋势
+- Personalization是AI agent能否最大程度帮助用户的核心
+
+**Current Limitation:**
+- 现有personalization主要在**digital world** 和 **digital tasks**
+- 缺少**physical world context**
+
+**Core Insight:**
+> 通过提供 **physical world input** (egocentric vision) 提升 AI agent 的 personalization
+
+### Positioning
+
+**Embodied Agent Research:**
+- **Input**: Physical world (egocentric vision + audio + IMU)
+- **Platform**: Smartphone (模拟智能眼镜，实际可行)
+- **System**: Built on OpenClaw (non-embodied base + physical world extension)
+
+**Why Egocentric Vision?**
+- 智能眼镜最适合**持续**提供physical world input
+- 第一人称视角 > 第三人称观察
+- 手机作为prototype设备（电池+Wi-Fi+摄像头）
+
+---
+
 ## Research Questions
 
-**RQ1:** How can we design a privacy-preserving life logging system that enables **understanding beyond classification**, with queryable, retrievable, and reasoning-capable personal memory?
+**RQ1:** What **physical world information** is most valuable for AI agent personalization, and how does it complement existing digital world context?
 
-**RQ2:** What is the lived experience of using a personalized life logging agent over a longitudinal self-study, particularly regarding privacy concerns, memory utility, and agent integration?
+**RQ2:** How should an embodied agent's **memory system** be designed to handle continuous egocentric vision input (format, storage, abstraction, decay)?
 
-**RQ3:** What design implications emerge from the intersection of cognitive memory theory, agent personalization, and embodied life logging practice?
+**RQ3:** To what extent does physical world input improve AI agent personalization for **digital tasks** vs **physical tasks**?
+
+---
+
+## Core Distinction: Non-embodied vs Embodied Agents
+
+### Non-embodied Agents (e.g., OpenClaw)
+
+**Input Dimension:**
+- Information source: Digital interactions (messages, files, web)
+- Input timing: Discrete, user-triggered
+- Information density: Low-frequency, high-semantic
+- Personalization signals: Explicit preferences, interaction patterns
+
+**Task Dimension:**
+- Scenarios: Digital workflows, information management
+- States: Abstract, symbolic representations
+- Needs: Efficiency, accuracy, personalization
+- Action reversibility: High (undo, revise)
+- Planning horizon: Short-term, task-specific
+
+### Embodied Agents (This Thesis)
+
+**Input Dimension:**
+- Information source: **Physical world (egocentric vision, audio, IMU)**
+- Input timing: **Continuous, passive capture**
+- Information density: **High-frequency, multi-modal, raw**
+- Personalization signals: **Implicit behaviors, environmental context, physical activities**
+
+**Task Dimension:**
+- Scenarios: **Physical activities, spatial navigation, real-world interactions**
+- States: **Embodied, sensorimotor, situational**
+- Needs: **Context awareness, proactive assistance, adaptation**
+- Action reversibility: **Low (physical actions have consequences)**
+- Planning horizon: **Long-term, life-integrated**
 
 ---
 
@@ -24,23 +87,26 @@
 
 This thesis makes the following contributions:
 
-1. **System Artifact:** A privacy-first life logging system that integrates:
-   - **Understanding beyond classification** (vs EgoLog's HAR focus)
-   - **Proactive agent integration** (vs passive recording systems)
-   - **Multi-dimensional memory** (episodic + semantic + user profile)
-   - **Privacy-by-design** (on-device processing, user control)
+1. **Understanding Physical World Value:**
+   - Identify which physical world information is valuable for personalization
+   - Compare utility for digital vs physical tasks
+   - Address the uncertainty: "Is physical world input actually useful?"
 
-2. **Empirical Findings:** Insights from a longitudinal self-study revealing:
-   - Long-term usage patterns and privacy concerns
-   - Memory retrieval effectiveness and limitations
-   - Agent integration challenges and opportunities
-   - Cognitive load management strategies
+2. **Memory System Design for Embodied Agents:**
+   - Input format: Multimodal → text abstraction vs raw storage vs hybrid
+   - Storage architecture: OpenClaw's markdown + vector DB + ?
+   - Abstraction mechanisms: When/how to summarize egocentric vision
+   - Decay policies: What to keep vs discard (battery/storage constraints)
 
-3. **Design Implications:** Guidelines for personalized life logging agents:
-   - Memory architecture design (ephemeral vs durable, episodic vs semantic)
-   - Personalization strategies (know vs do, input vs model vs objective)
-   - Self-study methodology (legitimacy strategies, rigor requirements)
-   - Privacy-utility trade-offs in practice
+3. **Empirical Evidence from Self-Study:**
+   - 1-2 week autoethnographic exploration
+   - Lived experience of embodied agent + continuous capture
+   - Privacy concerns and personalization benefits in practice
+
+4. **Design Framework for Embodied Personalization:**
+   - Guidelines for extending non-embodied agents (like OpenClaw) with physical world input
+   - Task-specific personalization strategies
+   - Privacy-utility trade-offs in continuous capture
 
 ---
 
@@ -108,24 +174,88 @@ This thesis makes the following contributions:
 
 ### 3. Conceptual Framework (1-2 pages)
 
-#### 3.1 Key Concepts
+#### 3.1 OpenClaw: A Representative Non-embodied Agent
 
-**Continuous Life Logging:**
-- Definition: Unobtrusive, long-term capture of daily activities
-- Scope: Visual (video), audio, motion (IMU), context (GPS)
-- Challenges: Battery, storage, privacy
+**Architecture Overview:**
 
-**Privacy-by-Design:**
-- Core principle: Privacy integrated from the start, not added later
-- Implementation: On-device processing, minimal data exposure
-- User control: Transparent, configurable privacy settings
+```
+OpenClaw System
+│
+├── Memory Layer
+│   ├── MEMORY.md (Durable, curated long-term)
+│   ├── memory/YYYY-MM-DD.md (Ephemeral daily logs)
+│   └── Vector Database (chunked, searchable)
+│
+└── Identity Layer
+    ├── USER.md (User info, preferences, habits)
+    ├── IDENTITY.md (Agent's external identity)
+    └── SOUL.md (Agent's "psyche" - personality, values, boundaries)
+```
 
-**Memory-Augmented AI Agents:**
-- Role: Personal assistant with access to life context
-- Integration: How memory enhances agent capabilities
-- Use cases: Contextual reminders, behavior insights, personalized assistance
+**Key Characteristics:**
+- **Plain Markdown Files**: Low complexity, high transparency
+- **File-based Truth**: AI only remembers what's written to disk
+- **Two-tier Memory**: Ephemeral (daily) + Durable (curated)
+- **Non-embodied**: Text-based, digital world only
 
-#### 3.2 Design Principles
+**Limitation:**
+> No physical world context → Limited personalization for embodied activities
+
+#### 3.2 Extending to Embodied: Adding Physical World Input
+
+**Proposed Extension:**
+
+```
+Enhanced Embodied System
+│
+├── Physical Input Layer (NEW)
+│   ├── Egocentric Vision (video frames)
+│   ├── Audio (ambient sound, speech)
+│   └── IMU (motion, activity)
+│
+├── Processing Layer (NEW)
+│   ├── On-device privacy filter
+│   ├── Activity recognition
+│   ├── Semantic extraction
+│   └── Summarization
+│
+├── Memory Layer (Extended)
+│   ├── OpenClaw's original structure
+│   ├── + Physical world logs
+│   ├── + Cross-modal indexing
+│   └── + Temporal-spatial metadata
+│
+└── Identity Layer (Inherited)
+    └── OpenClaw's USER + SOUL + IDENTITY
+```
+
+**Design Challenges:**
+1. **Format**: Raw video vs text summaries vs hybrid?
+2. **Storage**: How much to keep? Decay policy?
+3. **Abstraction**: When to summarize? What granularity?
+4. **Retrieval**: How to query multimodal memories?
+5. **Integration**: How to merge with existing markdown system?
+
+#### 3.3 Core Concepts
+
+**Physical World Information Types:**
+- **Activities**: What am I doing? (climbing, working, commuting)
+- **Environment**: Where am I? (gym, office, home)
+- **Social**: Who am I with? (alone, with friends)
+- **Objects**: What am I interacting with? (phone, laptop, coffee)
+- **Emotions**: How am I feeling? (stressed, relaxed, engaged)
+
+**Potential Value for Personalization:**
+1. **Context-aware responses**: "You seem tired from climbing, want a lighter task?"
+2. **Proactive suggestions**: "You usually call Sarah after the gym"
+3. **Behavior pattern discovery**: "You're most productive on Tuesday mornings"
+4. **Health insights**: "You've been sedentary for 4 hours"
+
+**Uncertainty (Research Questions):**
+- Is this information actually useful?
+- For which tasks? (digital vs physical)
+- How much detail is needed?
+- Does it justify the cost (battery, storage, privacy)?
 
 1. **Minimizing Burden:** System should not interfere with daily life
 2. **Privacy First:** User maintains control over all data
@@ -454,6 +584,198 @@ This thesis makes the following contributions:
 
 ---
 
-*Framework version: 1.0*
-*Last updated: 2026-03-03*
-*Structure based on: Hybrid System + Autoethnography (Advisor recommendation)*
+## Critical Uncertainties & Research Questions
+
+### ❓ Problem 1: Application Scenarios
+
+**The Core Question:**
+> Physical world input能提升AI agent personalization到**什么程度**？
+
+**Sub-questions:**
+1. **For Digital Tasks:**
+   - Does knowing I'm at the gym help with email drafting?
+   - Does seeing my workspace help with task prioritization?
+   - **Hypothesis**: Limited direct utility, potential indirect context
+
+2. **For Physical Tasks:**
+   - Better exercise recommendations if AI sees my workouts?
+   - Smarter scheduling if AI knows my commute patterns?
+   - **Problem**: What ARE "physical tasks" for AI agents?
+   - **Gap**: No established evaluation methods for embodied agent tasks
+
+3. **For Hybrid Tasks:**
+   - Context-aware reminders (location + activity)
+   - Proactive suggestions (behavior patterns)
+   - **Challenge**: Defining "success" metrics
+
+**Research Approach:**
+- **Exploratory**: Don't assume utility upfront
+- **Empirical**: Discover through self-study what's actually valuable
+- **Honest**: Report both benefits and limitations
+
+---
+
+### ❓ Problem 2: Memory System Design
+
+**The Core Challenge:**
+> 如何将连续的physical world input转化为有用的memory？
+
+**Design Decisions:**
+
+#### A. Input Format
+
+**Option 1: Text-only (Summarized)**
+```
+✅ Pros:
+- Compatible with OpenClaw's markdown system
+- Low storage
+- Fast retrieval
+
+❌ Cons:
+- Information loss
+- Summarization errors
+- No raw data for re-analysis
+```
+
+**Option 2: Raw Files (Video/Audio)**
+```
+✅ Pros:
+- Complete information
+- Re-processable
+
+❌ Cons:
+- Storage explosion (~100GB/week)
+- Privacy nightmare
+- Slow retrieval
+```
+
+**Option 3: Hybrid**
+```
+✅ Pros:
+- Text summaries for daily use
+- Key frames/clips for important moments
+- Balanced storage
+
+❌ Cons:
+- Complex indexing
+- Which moments to keep raw?
+
+👉 **Most likely choice**
+```
+
+#### B. Storage Architecture
+
+**Base: OpenClaw's Markdown**
+```
+memory/
+├── 2026-03-07.md (text summary of physical world)
+└── 2026-03-07/ (raw multimodal data)
+    ├── frames/ (key frames)
+    ├── audio/ (audio clips)
+    └── metadata.json
+```
+
+**Extended: Vector DB**
+```
+- Text embeddings from summaries
+- Image embeddings from key frames
+- Cross-modal retrieval
+```
+
+#### C. Abstraction Mechanism
+
+**When to Summarize?**
+- Real-time? (battery drain)
+- End of day? (memory limit)
+- Event-driven? (complex detection)
+
+**What Granularity?**
+- "Chris was at gym from 2-4pm" (high-level)
+- "Chris did bench press, 3 sets, 10 reps each" (medium)
+- [Full video] (raw)
+
+**How to Extract?**
+- Vision models (CLIP, BLIP)
+- Speech-to-text (Whisper)
+- Activity recognition (EgoLog's methods)
+
+#### D. Decay Policy
+
+**What to Keep?**
+- High-level patterns (indefinitely)
+- Daily summaries (30-90 days)
+- Raw data (7-14 days? Or delete immediately?)
+
+**Based on:**
+- Importance scores (LLM rating)
+- Retrieval frequency (usage-based)
+- Storage constraints (practical limits)
+
+---
+
+### ❓ Problem 3: Information Value
+
+**The Fundamental Question:**
+> Physical world information到底有没有用？
+
+**Skepticism:**
+- "Digital interactions (emails, messages) seem more useful"
+- "Do you really need to see my lunch to help me better?"
+- "Context windows are limited - prioritize digital data"
+
+**Counter-arguments:**
+- Physical activities reveal **emotions** (stress from rushing)
+- Environment shapes **cognitive state** (focus in quiet spaces)
+- Patterns emerge from **holistic view** (work-life balance)
+
+**Research Strategy:**
+1. **Don't assume** utility upfront
+2. **Collect data** first (continuous capture)
+3. **Analyze post-hoc**: Which physical information was actually queried?
+4. **Report honestly**: If limited utility, say so
+
+---
+
+## Methodology: Self-Study (Autoethnography)
+
+### Timeline
+- **Duration**: 1-2 weeks (tight deadline: 3-4 weeks total)
+- **Approach**: Autoethnography / Self-study
+- **Data collection**: Continuous egocentric capture + reflective journaling
+
+### Legitimacy Strategies (Neustaedter & Sengers, 2012)
+
+1. **Depth over breadth**: "I studied myself in depth for 2 weeks"
+2. **Insider expertise**: Unique access to subtle experiences
+3. **Transparency**: Full documentation of system + process
+4. **Rigor**: Daily reflection logs, systematic analysis
+5. **Theoretical contribution**: Connect to embodied cognition, agent personalization
+6. **Artifact creation**: Open-source system (OpenClaw extension)
+
+### Data Sources
+
+**Quantitative:**
+- System logs (capture frequency, retrieval queries)
+- Performance metrics (battery, storage, latency)
+- Usage statistics (which features used most)
+
+**Qualitative:**
+- Daily reflection journal (evening, 15-30 min)
+- Critical incident documentation (surprising moments)
+- Privacy concerns log (when did I feel uncomfortable?)
+
+### Analysis
+
+**Research Questions → Analysis Methods:**
+
+| RQ | Analysis |
+|----|----------|
+| RQ1: Information value | Query log analysis, reflection themes |
+| RQ2: Memory design | Storage growth, retrieval effectiveness |
+| RQ3: Task impact | Digital vs physical task performance |
+
+---
+
+*Framework version: 2.0*
+*Last updated: 2026-03-07*
+*Based on: Embodied Agent Personalization with Egocentric Vision*
