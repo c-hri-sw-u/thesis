@@ -60,7 +60,7 @@
 | **039** | What Is Personalization? Perspectives on Design and Implementation | - | - | 2.2 | | |
 | **040** | Enabling Personalized Long-term Interactions in LLM-based Agents | 2025 | - | 2.1, 2.2 | | |
 | **041** | Toward Personalized LLM-Powered Agents | 2026 | - | 2.1, 2.2 | | |
-| **042** | MEMENTO: Embodied Agents Meet Personalization | 2026 | - | 2.1, 2.2, 2.4 | | |
+| **042** | MEMENTO: Embodied Agents Meet Personalization | 2025 | - | 2.1, 2.2, 2.4 | | |
 | **043** | Soar: A Cognitive Architecture | 1987 | Laird et al. | 2.3 | | |
 | **044** | ACT-R: A Theory of Higher Level Cognition | 1993 | Anderson | 2.3 | | |
 | **045** | Memoria: Scalable Agentic Memory Framework | 2025 | - | 2.3 | | |
@@ -78,7 +78,7 @@
 - **018** OpenCLAW: A Production Personal AI Agent System (2025)
 - **040** Enabling Personalized Long-term Interactions in LLM-based Agents (2025)
 - **041** Toward Personalized LLM-Powered Agents (2026)
-- **042** MEMENTO: Embodied Agents Meet Personalization (2026) *[Also in 2.2, 2.4]*
+- **042** MEMENTO: Embodied Agents Meet Personalization (2025) *[Also in 2.2, 2.4]*
 
 ### 2.2 Personalization in AI Agents (4 papers)
 - **038** Personalization: A Taxonomy (2000)
@@ -108,7 +108,7 @@
 - **021** MDGEAR: Multi-Modal Egocentric Activity Recognition (2024)
 - **001** Embodied AI Agents: Modeling World (2025) *[Also in 2.1]*
 - **005** VINCI: A New Benchmark for Interactive Multimodal Conversation (2025) *[Also in 2.1]*
-- **042** MEMENTO: Embodied Agents Meet Personalization (2026) *[Also in 2.1, 2.2]*
+- **042** MEMENTO: Embodied Agents Meet Personalization (2025) *[Also in 2.1, 2.2]*
 
 ### 2.5 Egocentric Vision and Self-Logging (8 papers)
 - **027** SenseCam: A Wearable Camera for Lifelogging (2006)
@@ -244,7 +244,7 @@
 4. **001 Embodied AI Agents** (Fung et al., 2025) - Embodied agents foundation
 5. **014 Autobiographical Design** (Neustaedter & Sengers, 2012) - Methodology
 6. **019 Ego4D** (Grauman et al., 2022) - Egocentric vision benchmark
-7. **042 MEMENTO** (2026) - Embodied agents + personalization (KEY PAPER)
+7. **042** | MEMENTO: Embodied Agents Meet Personalization | 2025) - Embodied agents + personalization (KEY PAPER)
 8. **041 Toward Personalized LLM-Powered Agents** (2026) - Latest taxonomy
 9. **038 Personalization: A Taxonomy** (2000) - Foundational personalization theory
 10. **011 Mem0** (He et al., 2024) - Production memory system
