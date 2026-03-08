@@ -164,12 +164,11 @@
 
 ## Papers by Year
 
-### 2026 (3 papers)
+### 2026 (2 papers)
 - 036 EgoLog
 - 041 Toward Personalized LLM-Powered Agents
-- 042 MEMENTO
 
-### 2025 (13 papers)
+### 2025 (14 papers)
 - 001 Embodied AI Agents
 - 002 MemVerse
 - 003 VideoAgent
@@ -183,6 +182,7 @@
 - 018 OpenCLAW
 - 023 O-Mem
 - 040 Enabling Personalized Long-term Interactions
+- 042 MEMENTO
 - 045 Memoria
 
 ### 2024 (9 papers)
