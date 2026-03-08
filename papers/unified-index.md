@@ -20,13 +20,15 @@
 |---|-------|------|---------|--------|-------|--------|
 | **001** | Embodied AI Agents: Modeling World | 2025 | Fung et al. | 2.1, 2.4 | | |
 | **002** | MemVerse: A Versatile Benchmark for Memory Evaluation of Large Language Models | 2025 | Liu et al. | 2.3 | | |
-| **003** | VideoAgent: A Memory-Augmented Multimodal Agent for Video Understanding | 2025 | Ma et al. | 2.3, 2.5 | | |
+| **003** | VideoAgent: A Memory-Augmented Multimodal Agent for Video Understanding | 2025 | Ma et al. | 2.3, 2.5 | Proposes unified memory mechanism with temporal event descriptions and object-centric tracking for video understanding. Combines LLM+VLM with zero-shot tool-use. Relevance: Shows memory-augmented video agents, but not personalized for specific users. | > "We propose a memory-augmented multimodal agent that combines LLMs and VLMs with a unified memory mechanism." (Abstract)
+> "Closes the gap between open-source and proprietary models like Gemini 1.5 Pro on video understanding benchmarks." (Abstract) |
 | **004** | Memory in the Age of AI Agents: A Survey | 2025 | Hu et al. | 2.3 | | |
 | **005** | VINCI: A New Benchmark for Interactive Multimodal Conversation | 2025 | Huang et al. | 2.1, 2.4 | | |
 | **006** | MARC: Memory-Augmented Reinforcement Learning for Conversational Agents | 2024 | Wu et al. | 2.3 | | |
 | **006b** | On-Device AI: Challenges and Opportunities | 2024 | - | 2.4 | | |
 | **007** | A Survey on Vision-Language Models | 2024 | Lin et al. | 2.4 | | |
-| **008** | Mem2Ego: Egocentric Memory for Personalized Agents | 2025 | Zhang et al. | 2.3, 2.5 | | |
+| **008** | Mem2Ego: Egocentric Memory for Personalized Agents | 2025 | Zhang et al. | 2.3, 2.5 | Proposes adaptive retrieval from global memory with dynamic global-to-ego integration. Aligns global contextual cues with local perception. Relevance: Addresses object navigation but not personalized user memory or long-term personalization. | > "LLM-based methods convert global memory to language descriptions, losing geometric information." (Introduction)
+> "VLM-based methods rely solely on first-person perspective, suffering from partial observed decision problems." (Introduction) |
 | **009** | Long-term Memory for AI Agents | 2025 | Wang et al. | 2.3 | | |
 | **010** | A-MEM: A Memory Architecture for Personalized Agents | 2025 | - | 2.3 | | |
 | **011** | Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory | 2024 | He et al. | 2.3 | | |
@@ -37,15 +39,18 @@
 | **016** | A Survey on Large Language Model based Autonomous Agents | 2023 | Wang et al. | 2.1 | | |
 | **017** | The Rise and Potential of Large Language Model Based Agents | 2023 | Xi et al. | 2.1 | | |
 | **018** | OpenCLAW: A Production Personal AI Agent System | 2025 | Steinberger | 2.1 | | |
-| **019** | Ego4D: Around the World in 3,000 Hours of Egocentric Video | 2022 | Grauman et al. | 2.5 | | |
-| **020** | EPIC-KITCHENS: Large-Scale Dataset for Egocentric Activity Recognition | 2021 | Damen et al. | 2.5 | | |
+| **019** | Ego4D: Around the World in 3,000 Hours of Egocentric Video | 2022 | Grauman et al. | 2.5 | Introduces massive 3,000-hour egocentric dataset from 874 participants worldwide. Multi-task benchmarks for first-person perception. Relevance: Largest egocentric dataset, but focuses on recognition benchmarks, not agent integration or personalization. | > "We introduce Ego4D, a massive-scale egocentric video dataset of 3,000 hours from 874 participants worldwide." (Abstract)
+> "First-person perception requires persistent 3D understanding and interpretation of human-object interactions." (Introduction) |
+| **020** | EPIC-KITCHENS: Large-Scale Dataset for Egocentric Activity Recognition | 2021 | Damen et al. | 2.5 | Large-scale dataset (100 hours, 20M frames, 90K actions) from head-mounted cameras in 45 kitchens. Focuses on activity recognition benchmarks. Relevance: Dataset for egocentric activity recognition, but treated as end goal for accuracy, not agent use. | > "We present EPIC-KITCHENS-100, a collection of 100 hours, 20M frames, 90K actions in 700 variable-length videos." (Abstract)
+> "Our dataset is substantially larger with 11.5M frames vs 1M in ADL, making it the largest first-person dataset to date." (Introduction) |
 | **021** | MDGEAR: Multi-Modal Egocentric Activity Recognition | 2024 | Papadakis & Spyrou | 2.4, 2.5 | UNABLE TO DOWNLOAD - MDPI blocking automated downloads | |
 | **022** | MemGPT: Towards LLMs as Operating Systems | 2023 | - | 2.3 | | |
 | **023** | O-Mem: Omni Memory System for Personalized Agents | 2025 | - | 2.3 | ✓ Downloaded - arXiv:2511.13593 | |
 | **024** | Real-time Face Obfuscation for Wearable Cameras | 2023/24 | - | Others (Privacy) | DELETED - Not verifiable | |
 | **025** | Text Detection and Blurring in Egocentric Videos | 2023 | - | Others (Privacy) | DELETED - Not verifiable | |
 | **026** | Energy-Efficient Mobile Sensing | 2023 | - | Others (Systems) | DELETED - Not verifiable | |
-| **027** | SenseCam: A Wearable Camera for Lifelogging | 2006 | Hodges et al. | 2.5, Others (HCI) | | |
+| **027** | SenseCam: A Wearable Camera for Lifelogging | 2006 | Hodges et al. | 2.5, Others (HCI) | Wearable camera with sensor-triggered capture (accelerometer, light, PIR). Captures images every 30 seconds automatically. Relevance: Early egocentric system for personal memory, but no agent integration or active decision-making. | > "SenseCam is a wearable camera that automatically captures a continuous visual record of the wearer's day." (p. 177)
+> "We evaluate the efficacy of SenseCam in supporting autobiographical memory recall." (p. 182) |
 | **028** | Privacy Concerns in Personalized Systems | 2023 | - | Others (HCI) | DELETED - Not verifiable | |
 | **029** | Why Did You Say That? | 2024 | - | Others (HCI) | DELETED - Not verifiable | |
 | **030** | Trust in Long-Term AI Companions | 2023/24 | - | Others (HCI) | DELETED - Not verifiable | |
@@ -54,8 +59,10 @@
 | **033** | Theory of Mind in AI Agents | 2023 | - | Others (Theory) | DELETED - Not verifiable | |
 | **034** | The Personalization Paradox | 2024 | - | Others (Theory) | DELETED - Not verifiable | |
 | **035** | Ethics of Deep User Understanding | 2023/24 | - | Others (Ethics) | DELETED - Not verifiable | |
-| **036** | EgoLog | 2026 | - | 2.5 | ✓ Downloaded - arXiv:2504.02624 | |
-| **037** | MyLifeBits | 2000s | Gemmell et al. | 2.5 | | |
+| **036** | EgoLog | 2026 | - | 2.5 | ✓ Downloaded - arXiv:2504.02624 | Ego-centric fine-grained daily logging using audio-IMU fusion from wearables. Integrates LLM for scenario recognition. Relevance: Latest continuous egocentric system, but focuses on activity recognition, not personalization or agent memory. | > "Current solutions primarily rely on controlled, lab-based data collection, which limits their real-world applicability." (Abstract)
+> "We observe two key distinctions between fine-grained daily logging and conventional activity recognition." (Introduction) |
+| **037** | MyLifeBits | 2006 | Gemmell et al. | 2.5 | Personal database storing all digital information (documents, emails, web history, calls, media). Fulfillment of Vannevar Bush's Memex vision. Relevance: Shows breadth of personal data collection, but focuses on storage/search, not real-time agent use. | > "MyLifeBits aims to create a personal database for everything, fulfilling Vannevar Bush's Memex vision." (p. 88)
+> "The system stores scanned documents, digital photographs, email correspondence, web browsing history, and media consumption." (p. 89) |
 | **038** | Personalization: A Taxonomy | 2000 | Blom, Jan | 2.2 | Source: ACM DOI:10.1145/633292.633483 (paywalled) | |
 | **039** | What Is Personalization? Perspectives on Design and Implementation | - | - | 2.2 | | |
 | **040** | Enabling Personalized Long-term Interactions in LLM-based Agents | 2025 | - | 2.1, 2.2 | | |
