@@ -70,54 +70,54 @@
 ## Topic Distribution
 
 ### 2.1 From LLM-Based Agents to Personal AI Agents (9 papers)
-- **015** Generative Agents (Park et al., 2023)
-- **016** Survey on LLM-based Autonomous Agents (Wang et al., 2023)
-- **017** Rise and Potential of LLM Agents (Xi et al., 2023)
-- **001** Embodied AI Agents (Fung et al., 2025)
-- **005** VINCI (2025)
-- **018** OpenCLAW (Steinberger, 2025)
-- **040** Enabling Personalized Long-term Interactions (2025)
+- **015** Generative Agents: Interactive Simulacra of Human Behavior (2023)
+- **016** A Survey on Large Language Model based Autonomous Agents (2023)
+- **017** The Rise and Potential of Large Language Model Based Agents (2023)
+- **001** Embodied AI Agents: Modeling World (2025)
+- **005** VINCI: A New Benchmark for Interactive Multimodal Conversation (2025)
+- **018** OpenCLAW: A Production Personal AI Agent System (2025)
+- **040** Enabling Personalized Long-term Interactions in LLM-based Agents (2025)
 - **041** Toward Personalized LLM-Powered Agents (2026)
 - **042** MEMENTO: Embodied Agents Meet Personalization (2026) *[Also in 2.2, 2.4]*
 
-### 2.2 Personalization in AI Agents (5 papers)
+### 2.2 Personalization in AI Agents (4 papers)
 - **038** Personalization: A Taxonomy (2000)
-- **012** PRIME (Wang et al., 2025)
-- **013** PLLM Survey (Liu et al., 2025)
+- **012** PRIME: Dual-Memory Personalization for AI Agents (2025)
+- **013** A Survey of Personalized Large Language Models (2025)
 - **041** Toward Personalized LLM-Powered Agents (2026) *[Also in 2.1]*
 
 ### 2.3 Memory Architectures (16 papers)
 - **043** Soar: A Cognitive Architecture (1987)
-- **044** ACT-R (1993)
-- **022** MemGPT (2023)
-- **006** MARC (2024)
-- **011** Mem0 (He et al., 2024)
-- **002** MemVerse (2025)
-- **003** VideoAgent (2025)
-- **004** Memory Survey (Hu et al., 2025)
-- **008** Mem2Ego (2025)
-- **009** Long-term Memory (2025)
-- **010** A-MEM (2025)
-- **012** PRIME (Wang et al., 2025) *[Also in 2.2]*
-- **023** O-Mem (2025)
-- **045** Memoria (2025)
+- **044** ACT-R: A Theory of Higher Level Cognition (1993)
+- **022** MemGPT: Towards LLMs as Operating Systems (2023)
+- **006** MARC: Memory-Augmented Reinforcement Learning for Conversational Agents (2024)
+- **011** Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory (2024)
+- **002** MemVerse: A Versatile Benchmark for Memory Evaluation (2025)
+- **003** VideoAgent: A Memory-Augmented Multimodal Agent (2025)
+- **004** Memory in the Age of AI Agents: A Survey (2025)
+- **008** Mem2Ego: Egocentric Memory for Personalized Agents (2025)
+- **009** Long-term Memory for AI Agents (2025)
+- **010** A-MEM: A Memory Architecture for Personalized Agents (2025)
+- **012** PRIME: Dual-Memory Personalization (2025) *[Also in 2.2]*
+- **023** O-Mem: Omni Memory System (2025)
+- **045** Memoria: Scalable Agentic Memory Framework (2025)
 
 ### 2.4 Embodied Perception (6 papers)
-- **006b** On-Device AI (2024)
-- **007** VLM Survey (2024)
-- **021** MDGEAR (Papadakis & Spyrou, 2024)
-- **001** Embodied AI Agents (Fung et al., 2025) *[Also in 2.1]*
-- **005** VINCI (2025) *[Also in 2.1]*
-- **042** MEMENTO (2026) *[Also in 2.1, 2.2]*
+- **006b** On-Device AI: Challenges and Opportunities (2024)
+- **007** A Survey on Vision-Language Models (2024)
+- **021** MDGEAR: Multi-Modal Egocentric Activity Recognition (2024)
+- **001** Embodied AI Agents: Modeling World (2025) *[Also in 2.1]*
+- **005** VINCI: A New Benchmark for Interactive Multimodal Conversation (2025) *[Also in 2.1]*
+- **042** MEMENTO: Embodied Agents Meet Personalization (2026) *[Also in 2.1, 2.2]*
 
-### 2.5 Egocentric Vision and Self-Logging (7 papers)
-- **027** SenseCam (Hodges et al., 2006)
+### 2.5 Egocentric Vision and Self-Logging (8 papers)
+- **027** SenseCam: A Wearable Camera for Lifelogging (2006)
 - **037** MyLifeBits (2000s)
-- **020** EPIC-KITCHENS (Damen et al., 2021)
-- **019** Ego4D (Grauman et al., 2022)
-- **021** MDGEAR (Papadakis & Spyrou, 2024) *[Also in 2.4]*
-- **003** VideoAgent (2025) *[Also in 2.3]*
-- **008** Mem2Ego (2025) *[Also in 2.3]*
+- **020** EPIC-KITCHENS: Large-Scale Dataset for Egocentric Activity Recognition (2021)
+- **019** Ego4D: Around the World in 3,000 Hours of Egocentric Video (2022)
+- **021** MDGEAR: Multi-Modal Egocentric Activity Recognition (2024) *[Also in 2.4]*
+- **003** VideoAgent: A Memory-Augmented Multimodal Agent (2025) *[Also in 2.3]*
+- **008** Mem2Ego: Egocentric Memory for Personalized Agents (2025) *[Also in 2.3]*
 - **036** EgoLog (2026)
 
 ### Others (12 papers)
