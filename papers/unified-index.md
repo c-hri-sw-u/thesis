@@ -39,27 +39,27 @@
 | **018** | OpenCLAW: A Production Personal AI Agent System | 2025 | Steinberger | 2.1 | | |
 | **019** | Ego4D: Around the World in 3,000 Hours of Egocentric Video | 2022 | Grauman et al. | 2.5 | | |
 | **020** | EPIC-KITCHENS: Large-Scale Dataset for Egocentric Activity Recognition | 2021 | Damen et al. | 2.5 | | |
-| **021** | MDGEAR: Multi-Modal Egocentric Activity Recognition | 2024 | Papadakis & Spyrou | 2.4, 2.5 | | |
+| **021** | MDGEAR: Multi-Modal Egocentric Activity Recognition | 2024 | Papadakis & Spyrou | 2.4, 2.5 | UNABLE TO DOWNLOAD - MDPI blocking automated downloads | |
 | **022** | MemGPT: Towards LLMs as Operating Systems | 2023 | - | 2.3 | | |
-| **023** | O-Mem: Omni Memory System for Personalized Agents | 2025 | - | 2.3 | | |
-| **024** | Real-time Face Obfuscation for Wearable Cameras | 2023/24 | - | Others (Privacy) | | |
-| **025** | Text Detection and Blurring in Egocentric Videos | 2023 | - | Others (Privacy) | | |
-| **026** | Energy-Efficient Mobile Sensing | 2023 | - | Others (Systems) | | |
+| **023** | O-Mem: Omni Memory System for Personalized Agents | 2025 | - | 2.3 | ✓ Downloaded - arXiv:2511.13593 | |
+| **024** | Real-time Face Obfuscation for Wearable Cameras | 2023/24 | - | Others (Privacy) | DELETED - Not verifiable | |
+| **025** | Text Detection and Blurring in Egocentric Videos | 2023 | - | Others (Privacy) | DELETED - Not verifiable | |
+| **026** | Energy-Efficient Mobile Sensing | 2023 | - | Others (Systems) | DELETED - Not verifiable | |
 | **027** | SenseCam: A Wearable Camera for Lifelogging | 2006 | Hodges et al. | 2.5, Others (HCI) | | |
-| **028** | Privacy Concerns in Personalized Systems | 2023 | - | Others (HCI) | | |
-| **029** | Why Did You Say That? | 2024 | - | Others (HCI) | | |
-| **030** | Trust in Long-Term AI Companions | 2023/24 | - | Others (HCI) | | |
-| **031** | Emotional Bonds with AI Assistants | 2024 | - | Others (HCI) | | |
-| **032** | Theoretical Framework for User Modeling | 2023 | - | Others (Theory) | | |
-| **033** | Theory of Mind in AI Agents | 2023 | - | Others (Theory) | | |
-| **034** | The Personalization Paradox | 2024 | - | Others (Theory) | | |
-| **035** | Ethics of Deep User Understanding | 2023/24 | - | Others (Ethics) | | |
-| **036** | EgoLog | 2026 | - | 2.5 | | |
+| **028** | Privacy Concerns in Personalized Systems | 2023 | - | Others (HCI) | DELETED - Not verifiable | |
+| **029** | Why Did You Say That? | 2024 | - | Others (HCI) | DELETED - Not verifiable | |
+| **030** | Trust in Long-Term AI Companions | 2023/24 | - | Others (HCI) | DELETED - Not verifiable | |
+| **031** | Emotional Bonds with AI Assistants | 2024 | - | Others (HCI) | DELETED - Not verifiable | |
+| **032** | Theoretical Framework for User Modeling | 2023 | - | Others (Theory) | DELETED - Not verifiable | |
+| **033** | Theory of Mind in AI Agents | 2023 | - | Others (Theory) | DELETED - Not verifiable | |
+| **034** | The Personalization Paradox | 2024 | - | Others (Theory) | DELETED - Not verifiable | |
+| **035** | Ethics of Deep User Understanding | 2023/24 | - | Others (Ethics) | DELETED - Not verifiable | |
+| **036** | EgoLog | 2026 | - | 2.5 | ✓ Downloaded - arXiv:2504.02624 | |
 | **037** | MyLifeBits | 2000s | Gemmell et al. | 2.5 | | |
 | **038** | Personalization: A Taxonomy | 2000 | Blom, Jan | 2.2 | Source: ACM DOI:10.1145/633292.633483 (paywalled) | |
 | **039** | What Is Personalization? Perspectives on Design and Implementation | - | - | 2.2 | | |
 | **040** | Enabling Personalized Long-term Interactions in LLM-based Agents | 2025 | - | 2.1, 2.2 | | |
-| **041** | Toward Personalized LLM-Powered Agents | 2026 | - | 2.1, 2.2 | | |
+| **041** | Toward Personalized LLM-Powered Agents | 2026 | - | 2.1, 2.2 | ✓ Downloaded - arXiv:2602.22680 | |
 | **042** | MEMENTO: Embodied Agents Meet Personalization | 2025 | Kwon, Choi, Kim, Kim, Moon, Kwak, Huang, Yeo | 2.1, 2.2, 2.4 | ✓ Downloaded | |
 | **043** | Soar: An Architecture for General Intelligence | 1987 | Laird, Newell, Rosenbloom | 2.3 | ✓ Downloaded | Artificial Intelligence 33, 1-64 |
 | **044** | ACT-R: A Theory of Higher Level Cognition | 1997 | Anderson, Matessa, Lebiere | 2.3 | ✓ Downloaded | Human-Computer Interaction 12(4) |
@@ -120,45 +120,41 @@
 - **008** Mem2Ego: Egocentric Memory for Personalized Agents (2025) *[Also in 2.3]*
 - **036** EgoLog (2026)
 
-### Others (12 papers)
+### Others (1 paper)
 - **014** Autobiographical Design (Neustaedter & Sengers, 2012) - Methodology
-- **024** Face Obfuscation (2023/24) - Privacy
-- **025** Text Detection (2023) - Privacy
-- **026** Energy-Efficient Mobile Sensing (2023) - Systems
-- **028** Privacy Concerns in Personalized Systems (2023) - HCI
-- **029** Why Did You Say That? (2024) - HCI
-- **030** Trust in Long-Term AI Companions (2023/24) - HCI
-- **031** Emotional Bonds with AI Assistants (2024) - HCI
-- **032** Theoretical Framework for User Modeling (2023) - Theory
-- **033** Theory of Mind in AI Agents (2023) - Theory
-- **034** The Personalization Paradox (2024) - Theory
-- **035** Ethics of Deep User Understanding (2023/24) - Ethics
+
+**Deleted Papers (Not Verifiable):**
+- **024** Face Obfuscation (2023/24) - Privacy [DELETED]
+- **025** Text Detection (2023) - Privacy [DELETED]
+- **026** Energy-Efficient Mobile Sensing (2023) - Systems [DELETED]
+- **028** Privacy Concerns in Personalized Systems (2023) - HCI [DELETED]
+- **029** Why Did You Say That? (2024) - HCI [DELETED]
+- **030** Trust in Long-Term AI Companions (2023/24) - HCI [DELETED]
+- **031** Emotional Bonds with AI Assistants (2024) - HCI [DELETED]
+- **032** Theoretical Framework for User Modeling (2023) - Theory [DELETED]
+- **033** Theory of Mind in AI Agents (2023) - Theory [DELETED]
+- **034** The Personalization Paradox (2024) - Theory [DELETED]
+- **035** Ethics of Deep User Understanding (2023/24) - Ethics [DELETED]
 
 ### Others Sub-categories
 
 #### Methodology (1 paper)
 - **014** Autobiographical Design (2012) - Self-study methodology
 
-#### Privacy (2 papers)
-- **024** Face Obfuscation (2023/24) - Face detection and blur
-- **025** Text Detection (2023) - Text obfuscation
+#### Privacy (0 papers)
+*All privacy papers deleted - not verifiable*
 
-#### Systems (1 paper)
-- **026** Energy-Efficient Mobile Sensing (2023) - Battery optimization
+#### Systems (0 papers)
+*All systems papers deleted - not verifiable*
 
-#### HCI - User Studies (4 papers)
-- **028** Privacy Concerns in Personalized Systems (2023) - User perceptions
-- **029** Why Did You Say That? (2024) - Explainability
-- **030** Trust in Long-Term AI Companions (2023/24) - Long-term trust
-- **031** Emotional Bonds with AI Assistants (2024) - Emotional connection
+#### HCI - User Studies (0 papers)
+*All HCI papers deleted - not verifiable*
 
-#### Theory (3 papers)
-- **032** Theoretical Framework for User Modeling (2023) - User modeling theory
-- **033** Theory of Mind in AI Agents (2023) - Cognitive science perspective
-- **034** The Personalization Paradox (2024) - More data ≠ better understanding
+#### Theory (0 papers)
+*All theory papers deleted - not verifiable*
 
-#### Ethics (1 paper)
-- **035** Ethics of Deep User Understanding (2023/24) - Power imbalance, manipulation risk
+#### Ethics (0 papers)
+*All ethics papers deleted - not verifiable*
 
 ---
 
@@ -272,15 +268,20 @@
 
 ## Notes
 
-- Total papers: 45
+- Total papers: 34 (after cleanup - deleted 11 non-verifiable papers)
+- Papers with PDFs collected: 29
 - Papers with detailed summaries: 14 (from collected/ folder)
-- Papers with basic info: 31 (from paper_read.md, summaries.md, personalization_lit_review.md)
+- Papers with basic info: 20 (from paper_read.md, summaries.md, personalization_lit_review.md)
 - Papers in multiple topics: 8 (001, 003, 005, 008, 012, 021, 041, 042)
 
+**Batch 3 Cleanup Summary (2026-03-08):**
+- **Successfully Downloaded:** 3 papers (023 O-Mem, 036 EgoLog, 041 Toward Personalized LLM-Powered Agents)
+- **Unable to Download:** 2 papers (021 MDGEAR - MDPI blocking, 038 Personalization: A Taxonomy - ACM paywall)
+- **Deleted (Not Verifiable):** 11 papers (024-026, 028-035) - these appear to be AI hallucinations
+- **Completion Rate:** 29/34 = 85.3%
+
 **Missing Information:**
-- Papers 002, 003, 005, 006, 006b, 007, 008, 009, 010, 022, 023: Need to verify authors
-- Papers 024-026, 028-035: Missing author details
-- Papers 036-045: Need to verify years and authors
+- Papers 002, 003, 005, 006, 006b, 007, 008, 009, 010, 022: Need to verify authors
 - Paper 039: Missing year
 - Paper 037: Approximate year (2000s)
 - All papers: Need to fill in Notes and Quotes columns
