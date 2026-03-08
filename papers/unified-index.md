@@ -56,14 +56,14 @@
 | **035** | Ethics of Deep User Understanding | 2023/24 | - | Others (Ethics) | | |
 | **036** | EgoLog | 2026 | - | 2.5 | | |
 | **037** | MyLifeBits | 2000s | Gemmell et al. | 2.5 | | |
-| **038** | Personalization: A Taxonomy | 2000 | - | 2.2 | | |
+| **038** | Personalization: A Taxonomy | 2000 | Blom, Jan | 2.2 | Source: ACM DOI:10.1145/633292.633483 (paywalled) | |
 | **039** | What Is Personalization? Perspectives on Design and Implementation | - | - | 2.2 | | |
 | **040** | Enabling Personalized Long-term Interactions in LLM-based Agents | 2025 | - | 2.1, 2.2 | | |
 | **041** | Toward Personalized LLM-Powered Agents | 2026 | - | 2.1, 2.2 | | |
-| **042** | MEMENTO: Embodied Agents Meet Personalization | 2025 | - | 2.1, 2.2, 2.4 | | |
-| **043** | Soar: A Cognitive Architecture | 1987 | Laird et al. | 2.3 | | |
-| **044** | ACT-R: A Theory of Higher Level Cognition | 1993 | Anderson | 2.3 | | |
-| **045** | Memoria: Scalable Agentic Memory Framework | 2025 | - | 2.3 | | |
+| **042** | MEMENTO: Embodied Agents Meet Personalization | 2025 | Kwon, Choi, Kim, Kim, Moon, Kwak, Huang, Yeo | 2.1, 2.2, 2.4 | ✓ Downloaded | |
+| **043** | Soar: An Architecture for General Intelligence | 1987 | Laird, Newell, Rosenbloom | 2.3 | ✓ Downloaded | Artificial Intelligence 33, 1-64 |
+| **044** | ACT-R: A Theory of Higher Level Cognition | 1997 | Anderson, Matessa, Lebiere | 2.3 | ✓ Downloaded | Human-Computer Interaction 12(4) |
+| **045** | Memoria: A Scalable Agentic Memory Framework | 2025 | Sarin et al. | 2.3 | ✓ Downloaded | arXiv:2512.12686, AIML Systems 2025 |
 
 ---
 
