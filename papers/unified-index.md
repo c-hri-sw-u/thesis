@@ -135,6 +135,32 @@
 - **034** The Personalization Paradox (2024) - Theory
 - **035** Ethics of Deep User Understanding (2023/24) - Ethics
 
+### Others Sub-categories
+
+#### Methodology (1 paper)
+- **014** Autobiographical Design (2012) - Self-study methodology
+
+#### Privacy (2 papers)
+- **024** Face Obfuscation (2023/24) - Face detection and blur
+- **025** Text Detection (2023) - Text obfuscation
+
+#### Systems (1 paper)
+- **026** Energy-Efficient Mobile Sensing (2023) - Battery optimization
+
+#### HCI - User Studies (4 papers)
+- **028** Privacy Concerns in Personalized Systems (2023) - User perceptions
+- **029** Why Did You Say That? (2024) - Explainability
+- **030** Trust in Long-Term AI Companions (2023/24) - Long-term trust
+- **031** Emotional Bonds with AI Assistants (2024) - Emotional connection
+
+#### Theory (3 papers)
+- **032** Theoretical Framework for User Modeling (2023) - User modeling theory
+- **033** Theory of Mind in AI Agents (2023) - Cognitive science perspective
+- **034** The Personalization Paradox (2024) - More data ≠ better understanding
+
+#### Ethics (1 paper)
+- **035** Ethics of Deep User Understanding (2023/24) - Power imbalance, manipulation risk
+
 ---
 
 ## Papers by Year
