@@ -46,6 +46,14 @@
 | **025** | Text Detection and Blurring in Egocentric Videos | 2023 | - | Others (Privacy) | | |
 | **026** | Energy-Efficient Mobile Sensing | 2023 | - | Others (Systems) | | |
 | **027** | SenseCam: A Wearable Camera for Lifelogging | 2006 | Hodges et al. | 2.5, Others (HCI) | | |
+| **028** | Privacy Concerns in Personalized Systems | 2023 | - | Others (HCI) | | |
+| **029** | Why Did You Say That? | 2024 | - | Others (HCI) | | |
+| **030** | Trust in Long-Term AI Companions | 2023/24 | - | Others (HCI) | | |
+| **031** | Emotional Bonds with AI Assistants | 2024 | - | Others (HCI) | | |
+| **032** | Theoretical Framework for User Modeling | 2023 | - | Others (Theory) | | |
+| **033** | Theory of Mind in AI Agents | 2023 | - | Others (Theory) | | |
+| **034** | The Personalization Paradox | 2024 | - | Others (Theory) | | |
+| **035** | Ethics of Deep User Understanding | 2023/24 | - | Others (Ethics) | | |
 
 ---
 
@@ -91,11 +99,19 @@
 - **021** MDGEAR (Papadakis & Spyrou, 2024) *[Also in 2.4]*
 - **027** SenseCam (Hodges et al., 2006)
 
-### Others (4 papers)
+### Others (12 papers)
 - **014** Autobiographical Design (Neustaedter & Sengers, 2012) - Methodology
 - **024** Face Obfuscation (2023/24) - Privacy
 - **025** Text Detection (2023) - Privacy
 - **026** Energy-Efficient Mobile Sensing (2023) - Systems
+- **028** Privacy Concerns in Personalized Systems (2023) - HCI
+- **029** Why Did You Say That? (2024) - HCI
+- **030** Trust in Long-Term AI Companions (2023/24) - HCI
+- **031** Emotional Bonds with AI Assistants (2024) - HCI
+- **032** Theoretical Framework for User Modeling (2023) - Theory
+- **033** Theory of Mind in AI Agents (2023) - Theory
+- **034** The Personalization Paradox (2024) - Theory
+- **035** Ethics of Deep User Understanding (2023/24) - Ethics
 
 ---
 
@@ -115,14 +131,18 @@
 - 018 OpenCLAW
 - 023 O-Mem
 
-### 2024 (5 papers)
+### 2024 (9 papers)
 - 006 MARC
 - 006b On-Device AI
 - 007 VLM Survey
 - 011 Mem0
 - 021 MDGEAR
+- 029 Why Did You Say That?
+- 031 Emotional Bonds
+- 034 Personalization Paradox
+- 035 Ethics of Deep Understanding (approx)
 
-### 2023 (5 papers)
+### 2023 (10 papers)
 - 015 Generative Agents
 - 016 Survey on LLM-based Autonomous Agents
 - 017 Rise and Potential of LLM Agents
@@ -130,6 +150,10 @@
 - 024 Face Obfuscation (approx)
 - 025 Text Detection (approx)
 - 026 Energy-Efficient Sensing (approx)
+- 028 Privacy Concerns
+- 030 Trust in Long-Term AI (approx)
+- 032 Theoretical Framework
+- 033 Theory of Mind
 
 ### 2022 (1 paper)
 - 019 Ego4D
@@ -172,7 +196,7 @@
 
 ## Notes
 
-- Total papers: 27
+- Total papers: 35
 - Papers with summaries: 14
 - Papers with PDFs: 14
 - Papers in multiple topics: 5 (001, 003, 005, 008, 012, 021)
@@ -180,6 +204,7 @@
 **Missing Information:**
 - Papers 002, 003, 005, 006, 006b, 007, 008, 009, 010, 022, 023: Need to verify authors
 - Papers 024, 025, 026: Incomplete entries (missing details)
+- Papers 028-035: Missing author details (from personalization_lit_review.md References)
 - All papers: Need to fill in Notes and Quotes columns
 
 ---
