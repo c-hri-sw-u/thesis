@@ -54,24 +54,40 @@
 | **033** | Theory of Mind in AI Agents | 2023 | - | Others (Theory) | | |
 | **034** | The Personalization Paradox | 2024 | - | Others (Theory) | | |
 | **035** | Ethics of Deep User Understanding | 2023/24 | - | Others (Ethics) | | |
+| **036** | EgoLog | 2026 | - | 2.5 | | |
+| **037** | MyLifeBits | 2000s | Gemmell et al. | 2.5 | | |
+| **038** | Personalization: A Taxonomy | 2000 | - | 2.2 | | |
+| **039** | What Is Personalization? Perspectives on Design and Implementation | - | - | 2.2 | | |
+| **040** | Enabling Personalized Long-term Interactions in LLM-based Agents | 2025 | - | 2.1, 2.2 | | |
+| **041** | Toward Personalized LLM-Powered Agents | 2026 | - | 2.1, 2.2 | | |
+| **042** | MEMENTO: Embodied Agents Meet Personalization | 2026 | - | 2.1, 2.2, 2.4 | | |
+| **043** | Soar: A Cognitive Architecture | 1987 | Laird et al. | 2.3 | | |
+| **044** | ACT-R: A Theory of Higher Level Cognition | 1993 | Anderson | 2.3 | | |
+| **045** | Memoria: Scalable Agentic Memory Framework | 2025 | - | 2.3 | | |
 
 ---
 
 ## Topic Distribution
 
-### 2.1 From LLM-Based Agents to Personal AI Agents (6 papers)
+### 2.1 From LLM-Based Agents to Personal AI Agents (9 papers)
 - **001** Embodied AI Agents (Fung et al., 2025)
 - **005** VINCI (2025)
 - **015** Generative Agents (Park et al., 2023)
 - **016** Survey on LLM-based Autonomous Agents (Wang et al., 2023)
 - **017** Rise and Potential of LLM Agents (Xi et al., 2023)
 - **018** OpenCLAW (Steinberger, 2025)
+- **040** Enabling Personalized Long-term Interactions (2025)
+- **041** Toward Personalized LLM-Powered Agents (2026)
+- **042** MEMENTO: Embodied Agents Meet Personalization (2026) *[Also in 2.2, 2.4]*
 
-### 2.2 Personalization in AI Agents (2 papers)
+### 2.2 Personalization in AI Agents (5 papers)
 - **012** PRIME (Wang et al., 2025)
 - **013** PLLM Survey (Liu et al., 2025)
+- **038** Personalization: A Taxonomy (2000)
+- **039** What Is Personalization? (unknown year)
+- **041** Toward Personalized LLM-Powered Agents (2026) *[Also in 2.1]*
 
-### 2.3 Memory Architectures (13 papers)
+### 2.3 Memory Architectures (16 papers)
 - **002** MemVerse (2025)
 - **003** VideoAgent (2025)
 - **004** Memory Survey (Hu et al., 2025)
@@ -83,21 +99,27 @@
 - **012** PRIME (Wang et al., 2025) *[Also in 2.2]*
 - **022** MemGPT (2023)
 - **023** O-Mem (2025)
+- **043** Soar: A Cognitive Architecture (1987)
+- **044** ACT-R (1993)
+- **045** Memoria (2025)
 
-### 2.4 Embodied Perception (5 papers)
+### 2.4 Embodied Perception (6 papers)
 - **001** Embodied AI Agents (Fung et al., 2025) *[Also in 2.1]*
 - **005** VINCI (2025) *[Also in 2.1]*
 - **006b** On-Device AI (2024)
 - **007** VLM Survey (2024)
 - **021** MDGEAR (Papadakis & Spyrou, 2024)
+- **042** MEMENTO (2026) *[Also in 2.1, 2.2]*
 
-### 2.5 Egocentric Vision and Self-Logging (5 papers)
+### 2.5 Egocentric Vision and Self-Logging (7 papers)
 - **003** VideoAgent (2025) *[Also in 2.3]*
 - **008** Mem2Ego (2025) *[Also in 2.3]*
 - **019** Ego4D (Grauman et al., 2022)
 - **020** EPIC-KITCHENS (Damen et al., 2021)
 - **021** MDGEAR (Papadakis & Spyrou, 2024) *[Also in 2.4]*
 - **027** SenseCam (Hodges et al., 2006)
+- **036** EgoLog (2026)
+- **037** MyLifeBits (2000s)
 
 ### Others (12 papers)
 - **014** Autobiographical Design (Neustaedter & Sengers, 2012) - Methodology
@@ -117,7 +139,12 @@
 
 ## Papers by Year
 
-### 2025 (12 papers)
+### 2026 (3 papers)
+- 036 EgoLog
+- 041 Toward Personalized LLM-Powered Agents
+- 042 MEMENTO
+
+### 2025 (13 papers)
 - 001 Embodied AI Agents
 - 002 MemVerse
 - 003 VideoAgent
@@ -130,6 +157,8 @@
 - 013 PLLM Survey
 - 018 OpenCLAW
 - 023 O-Mem
+- 040 Enabling Personalized Long-term Interactions
+- 045 Memoria
 
 ### 2024 (9 papers)
 - 006 MARC
@@ -161,50 +190,74 @@
 ### 2021 (1 paper)
 - 020 EPIC-KITCHENS
 
-### 2006 (1 paper)
-- 027 SenseCam
+### 2000s (1 paper)
+- 037 MyLifeBits
+
+### 2000 (1 paper)
+- 038 Personalization: A Taxonomy
+
+### 1993 (1 paper)
+- 044 ACT-R
+
+### 1987 (1 paper)
+- 043 Soar
 
 ### 2012 (1 paper)
 - 014 Autobiographical Design
+
+### 2006 (1 paper)
+- 027 SenseCam
 
 ---
 
 ## Priority Reading List
 
-### Tier 1: Must Read (Core Papers)
+### Tier 1: Must Read (Core Papers - 10 papers)
 1. **013 PLLM Survey** (Liu et al., 2025) - Comprehensive personalization taxonomy
 2. **012 PRIME** (Wang et al., 2025) - Dual-memory personalization
 3. **004 Memory Survey** (Hu et al., 2025) - Memory architectures overview
 4. **001 Embodied AI Agents** (Fung et al., 2025) - Embodied agents foundation
 5. **014 Autobiographical Design** (Neustaedter & Sengers, 2012) - Methodology
 6. **019 Ego4D** (Grauman et al., 2022) - Egocentric vision benchmark
+7. **042 MEMENTO** (2026) - Embodied agents + personalization (KEY PAPER)
+8. **041 Toward Personalized LLM-Powered Agents** (2026) - Latest taxonomy
+9. **038 Personalization: A Taxonomy** (2000) - Foundational personalization theory
+10. **011 Mem0** (He et al., 2024) - Production memory system
 
-### Tier 2: Should Read (Supporting Papers)
-7. **008 Mem2Ego** (2025) - Egocentric memory
-8. **003 VideoAgent** (2025) - Video understanding
-9. **011 Mem0** (He et al., 2024) - Production memory system
-10. **015 Generative Agents** (Park et al., 2023) - Agent simulation
-11. **018 OpenCLAW** (Steinberger, 2025) - Production system example
-12. **022 MemGPT** (2023) - Hierarchical memory
-13. **021 MDGEAR** (2024) - Multimodal fusion
-14. **027 SenseCam** (2006) - Early lifelogging
+### Tier 2: Should Read (Supporting Papers - 14 papers)
+11. **008 Mem2Ego** (2025) - Egocentric memory
+12. **003 VideoAgent** (2025) - Video understanding
+13. **015 Generative Agents** (Park et al., 2023) - Agent simulation
+14. **018 OpenCLAW** (Steinberger, 2025) - Production system example
+15. **022 MemGPT** (2023) - Hierarchical memory
+16. **021 MDGEAR** (2024) - Multimodal fusion
+17. **027 SenseCam** (2006) - Early lifelogging
+18. **036 EgoLog** (2026) - Latest self-log system
+19. **037 MyLifeBits** (2000s) - Classic lifelogging
+20. **040 Enabling Personalized Long-term Interactions** (2025) - Long-term agents
+21. **043 Soar** (1987) - Cognitive architecture foundation
+22. **044 ACT-R** (1993) - Activation-based memory
+23. **045 Memoria** (2025) - Scalable agentic memory
+24. **023 O-Mem** (2025) - Omni memory system
 
-### Tier 3: Nice to Have (Background Papers)
-- 002, 005, 006, 006b, 007, 009, 010, 016, 017, 020, 023, 024, 025, 026
+### Tier 3: Nice to Have (Background Papers - 21 papers)
+- 002, 005, 006, 006b, 007, 009, 010, 016, 017, 020, 024-035, 039
 
 ---
 
 ## Notes
 
-- Total papers: 35
-- Papers with summaries: 14
-- Papers with PDFs: 14
-- Papers in multiple topics: 5 (001, 003, 005, 008, 012, 021)
+- Total papers: 45
+- Papers with detailed summaries: 14 (from collected/ folder)
+- Papers with basic info: 31 (from paper_read.md, summaries.md, personalization_lit_review.md)
+- Papers in multiple topics: 8 (001, 003, 005, 008, 012, 021, 041, 042)
 
 **Missing Information:**
 - Papers 002, 003, 005, 006, 006b, 007, 008, 009, 010, 022, 023: Need to verify authors
-- Papers 024, 025, 026: Incomplete entries (missing details)
-- Papers 028-035: Missing author details (from personalization_lit_review.md References)
+- Papers 024-026, 028-035: Missing author details
+- Papers 036-045: Need to verify years and authors
+- Paper 039: Missing year
+- Paper 037: Approximate year (2000s)
 - All papers: Need to fill in Notes and Quotes columns
 
 ---
