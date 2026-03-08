@@ -70,56 +70,55 @@
 ## Topic Distribution
 
 ### 2.1 From LLM-Based Agents to Personal AI Agents (9 papers)
-- **001** Embodied AI Agents (Fung et al., 2025)
-- **005** VINCI (2025)
 - **015** Generative Agents (Park et al., 2023)
 - **016** Survey on LLM-based Autonomous Agents (Wang et al., 2023)
 - **017** Rise and Potential of LLM Agents (Xi et al., 2023)
+- **001** Embodied AI Agents (Fung et al., 2025)
+- **005** VINCI (2025)
 - **018** OpenCLAW (Steinberger, 2025)
 - **040** Enabling Personalized Long-term Interactions (2025)
 - **041** Toward Personalized LLM-Powered Agents (2026)
 - **042** MEMENTO: Embodied Agents Meet Personalization (2026) *[Also in 2.2, 2.4]*
 
 ### 2.2 Personalization in AI Agents (5 papers)
+- **038** Personalization: A Taxonomy (2000)
 - **012** PRIME (Wang et al., 2025)
 - **013** PLLM Survey (Liu et al., 2025)
-- **038** Personalization: A Taxonomy (2000)
-- **039** What Is Personalization? (unknown year)
 - **041** Toward Personalized LLM-Powered Agents (2026) *[Also in 2.1]*
 
 ### 2.3 Memory Architectures (16 papers)
+- **043** Soar: A Cognitive Architecture (1987)
+- **044** ACT-R (1993)
+- **022** MemGPT (2023)
+- **006** MARC (2024)
+- **011** Mem0 (He et al., 2024)
 - **002** MemVerse (2025)
 - **003** VideoAgent (2025)
 - **004** Memory Survey (Hu et al., 2025)
-- **006** MARC (2024)
 - **008** Mem2Ego (2025)
 - **009** Long-term Memory (2025)
 - **010** A-MEM (2025)
-- **011** Mem0 (He et al., 2024)
 - **012** PRIME (Wang et al., 2025) *[Also in 2.2]*
-- **022** MemGPT (2023)
 - **023** O-Mem (2025)
-- **043** Soar: A Cognitive Architecture (1987)
-- **044** ACT-R (1993)
 - **045** Memoria (2025)
 
 ### 2.4 Embodied Perception (6 papers)
-- **001** Embodied AI Agents (Fung et al., 2025) *[Also in 2.1]*
-- **005** VINCI (2025) *[Also in 2.1]*
 - **006b** On-Device AI (2024)
 - **007** VLM Survey (2024)
 - **021** MDGEAR (Papadakis & Spyrou, 2024)
+- **001** Embodied AI Agents (Fung et al., 2025) *[Also in 2.1]*
+- **005** VINCI (2025) *[Also in 2.1]*
 - **042** MEMENTO (2026) *[Also in 2.1, 2.2]*
 
 ### 2.5 Egocentric Vision and Self-Logging (7 papers)
+- **027** SenseCam (Hodges et al., 2006)
+- **037** MyLifeBits (2000s)
+- **020** EPIC-KITCHENS (Damen et al., 2021)
+- **019** Ego4D (Grauman et al., 2022)
+- **021** MDGEAR (Papadakis & Spyrou, 2024) *[Also in 2.4]*
 - **003** VideoAgent (2025) *[Also in 2.3]*
 - **008** Mem2Ego (2025) *[Also in 2.3]*
-- **019** Ego4D (Grauman et al., 2022)
-- **020** EPIC-KITCHENS (Damen et al., 2021)
-- **021** MDGEAR (Papadakis & Spyrou, 2024) *[Also in 2.4]*
-- **027** SenseCam (Hodges et al., 2006)
 - **036** EgoLog (2026)
-- **037** MyLifeBits (2000s)
 
 ### Others (12 papers)
 - **014** Autobiographical Design (Neustaedter & Sengers, 2012) - Methodology
