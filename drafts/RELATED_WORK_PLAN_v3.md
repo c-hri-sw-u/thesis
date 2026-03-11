@@ -71,28 +71,29 @@
 
 ### **2.2 Personalization in AI Agents** (200 words)
 
-#### Structure (3 parts)
+#### Structure (4 parts)
 
-**Part 1: Two Research Streams (60 words)**
-- **Stream 1: PLLM (Personalized LLMs)**
-  - Focus: Adapting LLM weights/prompts to individual users
-  - Papers: 013 PLLM Survey (Liu et al., 2025)
-  - Context: Recommendation systems, personalized generation
+**Part 1: Early Recognition (40 words)**
+- 013 PLLM Survey (Liu et al., 2025): Personalization recognized as crucial for LLMs
+- Early work explored: adapting model weights, personalized prompting
+- Context: Recommendation systems, personalized text generation
 
-- **Stream 2: P-for-Agents (Personalization for Agents)**
-  - Focus: Agents that learn user preferences over time
-  - Papers: 012 PRIME (Wang et al., 2025), 041 Toward Personalized LLM-Powered Agents (2026)
-  - Context: Persistent memory, adaptive behavior
+**Part 2: Evolution to Agents (60 words)**
+- **As personal AI agents matured** (OpenCLAW 2025, generative agents)
+- Research focus shifted: **personalization for agents**
+- Papers: 012 PRIME (Wang et al., 2025), 041 Toward Personalized LLM-Powered Agents (2026)
+- Focus: Long-term user preferences, persistent memory, adaptive behavior
+- Collective: "This evolution shows personalization has become central to agent effectiveness"
 
-**Part 2: What They Capture (60 words)**
-- Both streams build user models from:
+**Part 3: What They Achieve (50 words)**
+- Current approaches build user models from:
   - Chat logs and interaction history
   - Explicit preferences and feedback
   - Behavioral patterns over time
-- Example: "PRIME uses dual-memory architecture to maintain user-specific cognitive patterns"
-- Collective: "Together, these approaches demonstrate that personalization significantly improves agent effectiveness"
+- Example: "PRIME maintains dual-memory architecture for user-specific cognitive patterns"
+- Collective: "These approaches demonstrate that personalization significantly improves agent effectiveness"
 
-**Part 3: The Critical Gap (80 words)**
+**Part 4: The Critical Gap (50 words)**
 - **BUT:** "However, all current personalization approaches share a fundamental limitation"
 - What they miss:
   - Physical location and environment
