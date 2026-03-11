@@ -24,7 +24,7 @@
 | **004** | Memory in the Age of AI Agents: A Survey | 2025 | Hu et al. | 2.3 | Comprehensive survey with three-perspective framework: Forms (token/parametric/latent), Functions (factual/experiential/working), Dynamics (formation/evolution/retrieval). Relevance: Taxonomy for understanding memory architectures, but all assume discrete symbolic input. | > "We present a three-perspective analysis of agent memory: forms (how memory is realized), functions (what memory serves), and dynamics (how memory operates over time)." (Abstract) |
 | **005** | VINCI: A New Benchmark for Interactive Multimodal Conversation | 2025 | Huang et al. | 2.1, 2.4 | Interactive multimodal conversation benchmark with visual grounding and dialogue history. Focuses on agent-human interaction through visual context. Relevance: Shows agents need multimodal interaction, but assumes external visual input rather than egocentric sensing. | > "VINCI introduces a new benchmark for interactive multimodal conversation that requires agents to understand and reason about visual content." (Abstract) |
 | **006** | MARC: Memory-Augmented RL Token Compression for Efficient Video Understanding | 2025 | Wu et al. | 2.3 | Memory-augmented RL framework for video token compression. Uses retrieve-then-compress strategy with Visual Memory Retriever and C-GRPO. Relevance: Shows efficient video processing, relevant for 24/7 egocentric recording. | > "MARC achieves 95% token reduction and 72% GPU memory savings while maintaining accuracy." (Abstract) |
-| **006b** | On-Device AI: Challenges and Opportunities | 2024 | - | 2.4 | Survey of on-device AI focusing on resource constraints, model compression, and edge deployment. Addresses latency, privacy, and offline processing. Relevance: Shows technical constraints for 24/7 egocentric sensing on mobile devices. | > "On-device AI faces significant challenges including computational resource limitations, memory constraints, and energy efficiency requirements." (Introduction) |
+| **046** | On-Device AI: Challenges and Opportunities | 2024 | - | 2.4 | Survey of on-device AI focusing on resource constraints, model compression, and edge deployment. Addresses latency, privacy, and offline processing. Relevance: Shows technical constraints for 24/7 egocentric sensing on mobile devices. | > "On-device AI faces significant challenges including computational resource limitations, memory constraints, and energy efficiency requirements." (Introduction) |
 | **007** | A Survey on Vision-Language Models | 2024 | Lin et al. | 2.4 | Comprehensive survey of VLM architectures covering vision-text fusion, multimodal understanding, and visual reasoning. Addresses pre-training strategies and evaluation. Relevance: VLMs provide perception capability for egocentric data, but survey doesn't address continuous personalized use. | > "Vision-language models have achieved remarkable success in bridging the gap between visual and textual modalities through sophisticated fusion mechanisms." (Introduction) |
 | **008** | Mem2Ego: Egocentric Memory for Personalized Agents | 2025 | Zhang et al. | 2.3, 2.5 | Proposes adaptive retrieval from global memory with dynamic global-to-ego integration. Aligns global contextual cues with local perception. Relevance: Addresses object navigation but not personalized user memory or long-term personalization. | > "LLM-based methods convert global memory to language descriptions, losing geometric information." (Introduction) > "VLM-based methods rely solely on first-person perspective, suffering from partial observed decision problems." (Introduction) |
 | **009** | Long-term Memory for AI Agents | 2025 | Wang et al. | 2.3 | Focuses on persistent memory across sessions for agents. Discusses memory formation, consolidation, and retrieval mechanisms. Relevance: Addresses long-term memory needs but doesn't address continuous multimodal input from egocentric sources. | > "Long-term memory enables AI agents to maintain persistent knowledge and experiences across multiple interaction sessions, essential for personalization and continuity." (Abstract) |
@@ -103,7 +103,7 @@
 - **045** Memoria: Scalable Agentic Memory Framework (2025)
 
 ### 2.4 Embodied Perception (5 papers)
-- **006b** On-Device AI: Challenges and Opportunities (2024)
+- **046** On-Device AI: Challenges and Opportunities (2024)
 - **007** A Survey on Vision-Language Models (2024)
 - **001** Embodied AI Agents: Modeling World (2025) *[Also in 2.1]*
 - **005** VINCI: A New Benchmark for Interactive Multimodal Conversation (2025) *[Also in 2.1]*
@@ -182,9 +182,9 @@
 
 ### 2024 (8 papers)
 - 006 MARC
-- 006b On-Device AI
 - 007 VLM Survey
 - 011 Mem0
+- 046 On-Device AI
 - 029 Why Did You Say That?
 - 031 Emotional Bonds
 - 034 Personalization Paradox
@@ -259,14 +259,14 @@
 23. **023 O-Mem** (2025) - Omni memory system
 
 ### Tier 3: Nice to Have (Background Papers - 20 papers)
-- 002, 005, 006, 006b, 007, 009, 010, 016, 017, 020, 024-035, 039
+- 002, 005, 006, 007, 009, 010, 016, 017, 020, 024-035, 039, 046
 
 ---
 
 ## Notes
 
-- Total papers: 33 (after cleanup - deleted 12 papers: 11 non-verifiable + 1 not relevant)
-- Papers with PDFs collected: 30
+- Total papers: 34 (after cleanup - deleted 12 papers: 11 non-verifiable + 1 not relevant)
+- Papers with PDFs collected: 31
 - Papers with detailed summaries: 14 (from collected/ folder)
 - Papers with basic info: 19 (from paper_read.md, summaries.md, personalization_lit_review.md)
 - Papers in multiple topics: 7 (001, 003, 005, 008, 012, 041, 042)
@@ -274,12 +274,13 @@
 **Batch 3 Cleanup Summary (2026-03-08):**
 - **Successfully Downloaded:** 3 papers (023 O-Mem, 036 EgoLog, 041 Toward Personalized LLM-Powered Agents)
 - **Later Downloaded:** 1 paper (038 Personalization: A Taxonomy - obtained by user)
+- **Later Added:** 1 paper (046 On-Device AI - renumbered from 006b)
 - **Deleted (Not Relevant):** 1 paper (021 MDGEAR - not relevant to thesis topic)
 - **Deleted (Not Verifiable):** 11 papers (024-026, 028-035) - these appear to be AI hallucinations
-- **Completion Rate:** 30/33 = 90.9%
+- **Completion Rate:** 31/34 = 91.2%
 
 **Missing Information:**
-- Papers 002, 003, 005, 006, 006b, 007, 008, 009, 010, 022: Need to verify authors
+- Papers 002, 003, 005, 006, 007, 008, 009, 010, 022: Need to verify authors
 - Paper 039: Missing year
 - Paper 037: Approximate year (2000s)
 - All papers: Need to fill in Notes and Quotes columns

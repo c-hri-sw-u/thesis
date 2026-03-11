@@ -1,4 +1,4 @@
-# On-Device AI: Challenges and Opportunities
+# 046 - On-Device AI: Challenges and Opportunities
 
 **作者：** Xubin Wang et al.
 **来源：** ACM Computing Surveys, arXiv preprint arXiv:2503.06027
