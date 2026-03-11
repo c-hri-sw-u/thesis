@@ -39,7 +39,7 @@
 | **018** | OpenCLAW: A Production Personal AI Agent System | 2025 | Steinberger | 2.1 | Production personal AI agent system with tools, memory, and continuous learning. Demonstrates practical deployment challenges and solutions. Relevance: Shows production personal agents, but based on digital interactions not physical egocentric sensing. | > "OpenCLAW demonstrates a production-ready personal AI agent system that integrates tools, memory, and continuous learning capabilities for real-world deployment." (Abstract) |
 | **019** | Ego4D: Around the World in 3,000 Hours of Egocentric Video | 2022 | Grauman et al. | 2.5 | Introduces massive 3,000-hour egocentric dataset from 874 participants worldwide. Multi-task benchmarks for first-person perception. Relevance: Largest egocentric dataset, but focuses on recognition benchmarks, not agent integration or personalization. | > "We introduce Ego4D, a massive-scale egocentric video dataset of 3,000 hours from 874 participants worldwide." (Abstract) > "First-person perception requires persistent 3D understanding and interpretation of human-object interactions." (Introduction) |
 | **020** | EPIC-KITCHENS: Large-Scale Dataset for Egocentric Activity Recognition | 2021 | Damen et al. | 2.5 | Large-scale dataset (100 hours, 20M frames, 90K actions) from head-mounted cameras in 45 kitchens. Focuses on activity recognition benchmarks. Relevance: Dataset for egocentric activity recognition, but treated as end goal for accuracy, not agent use. | > "We present EPIC-KITCHENS-100, a collection of 100 hours, 20M frames, 90K actions in 700 variable-length videos." (Abstract) > "Our dataset is substantially larger with 11.5M frames vs 1M in ADL, making it the largest first-person dataset to date." (Introduction) |
-| **021** | MDGEAR: Multi-Modal Egocentric Activity Recognition | 2024 | Papadakis & Spyrou | 2.4, 2.5 | UNABLE TO DOWNLOAD - MDPI blocking automated downloads | |
+| **021** | MDGEAR: Multi-Modal Egocentric Activity Recognition | 2024 | Papadakis & Spyrou | 2.4, 2.5 | DELETED - Not relevant to thesis topic | |
 | **022** | MemGPT: Towards LLMs as Operating Systems | 2023 | - | 2.3 | Virtual context management with hierarchical memory system inspired by OS. Uses interrupts for agent-user control flow. Relevance: Memory management pattern for agents, but designed for text interactions not multimodal egocentric data. | > "We propose virtual context management, a technique drawing inspiration from hierarchical memory systems in traditional operating systems that provide the appearance of large memory resources through data movement between fast and slow memory." > "MemGPT is able to analyze large documents that far exceed the underlying LLM's context window, and can create conversational agents that remember, reflect, and evolve dynamically through long-term interactions with their users." |
 | **023** | O-Mem: Omni Memory System for Personalized Agents | 2025 | - | 2.3 | ✓ Downloaded - arXiv:2511.13593 | Active user profiling with dynamic memory extraction. Supports hierarchical retrieval for persona and topic context. Relevance: Personalized memory pattern but focuses on proactive user interactions, not continuous egocentric sensing. | > "We propose the initial design of O-Mem, a novel memory framework based on active user profiling that dynamically extracts and updates user characteristics and event records from their proactive interactions with agents." > "O-Mem supports hierarchical retrieval of persona attributes and topic-related context, enabling more adaptive and coherent personalized responses." |
 | **024** | Real-time Face Obfuscation for Wearable Cameras | 2023/24 | - | Others (Privacy) | DELETED - Not verifiable | |
@@ -56,7 +56,7 @@
 | **035** | Ethics of Deep User Understanding | 2023/24 | - | Others (Ethics) | DELETED - Not verifiable | |
 | **036** | EgoLog | 2026 | - | 2.5 | ✓ Downloaded - arXiv:2504.02624 | Ego-centric fine-grained daily logging using audio-IMU fusion from wearables. Integrates LLM for scenario recognition. Relevance: Latest continuous egocentric system, but focuses on activity recognition, not personalization or agent memory. | > "Current solutions primarily rely on controlled, lab-based data collection, which limits their real-world applicability." (Abstract) > "We observe two key distinctions between fine-grained daily logging and conventional activity recognition." (Introduction) |
 | **037** | MyLifeBits | 2006 | Gemmell et al. | 2.5 | Personal database storing all digital information (documents, emails, web history, calls, media). Fulfillment of Vannevar Bush's Memex vision. Relevance: Shows breadth of personal data collection, but focuses on storage/search, not real-time agent use. | > "MyLifeBits aims to create a personal database for everything, fulfilling Vannevar Bush's Memex vision." (p. 88) > "The system stores scanned documents, digital photographs, email correspondence, web browsing history, and media consumption." (p. 89) |
-| **038** | Personalization: A Taxonomy | 2000 | Blom, Jan | 2.2 | Source: ACM DOI:10.1145/633292.633483 (paywalled) | |
+| **038** | Personalization: A Taxonomy | 2000 | Blom, Jan | 2.2 | ✓ Downloaded - ACM CHI Extended Abstracts | Foundational taxonomy defining personalization dimensions. Distinguishes personalization from adaptation and customization. Relevance: Theoretical framework for personalization, but predates AI agents and doesn't address physical context. | > "Personalization is the process of changing the functionality, user interface, information content, or distinct behavior of a system to increase its personal relevance to an individual." (Abstract) |
 | **039** | What Is Personalization? Perspectives on Design and Implementation | - | - | 2.2 | Perspectives on personalization theory and design principles. Analyzes personalization dimensions and implementation strategies. Relevance: Theoretical foundation for personalization, but predates LLM era and doesn't address physical context. | > "Personalization is the process of tailoring systems, content, or experiences to individual users based on their characteristics, preferences, behaviors, or context." (Abstract) |
 | **040** | Enabling Personalized Long-term Interactions in LLM-based Agents | 2025 | - | 2.1, 2.2 | Focuses on long-term interactions and personalization for LLM agents. Discusses memory, adaptation, and relationship building. Relevance: Addresses long-term personalization, but based on conversational history not physical egocentric data. | > "Long-term interactions with LLM-based agents require persistent personalization mechanisms that adapt to users over time while maintaining relationship consistency." (Abstract) |
 | **041** | Toward Personalized LLM-Powered Agents | 2026 | - | 2.1, 2.2 | ✓ Downloaded - arXiv:2602.22680 | Four-component framework: profile modeling, memory, planning, action execution. Organizes literature around agent personalization capabilities. Relevance: Comprehensive framework for personalized agents, but doesn't address physical world integration. | > "We organize the literature around four interdependent components: profile modeling, memory, planning, and action execution. Using this taxonomy, we synthesize representative methods and analyze how user signals are represented, propagated, and utilized." > "By offering a structured framework for understanding and designing personalized LLM-powered agents, this survey charts a roadmap toward more user-aligned, adaptive, robust, and deployable agentic systems." |
@@ -102,20 +102,18 @@
 - **023** O-Mem: Omni Memory System (2025)
 - **045** Memoria: Scalable Agentic Memory Framework (2025)
 
-### 2.4 Embodied Perception (6 papers)
+### 2.4 Embodied Perception (5 papers)
 - **006b** On-Device AI: Challenges and Opportunities (2024)
 - **007** A Survey on Vision-Language Models (2024)
-- **021** MDGEAR: Multi-Modal Egocentric Activity Recognition (2024)
 - **001** Embodied AI Agents: Modeling World (2025) *[Also in 2.1]*
 - **005** VINCI: A New Benchmark for Interactive Multimodal Conversation (2025) *[Also in 2.1]*
 - **042** MEMENTO: Embodied Agents Meet Personalization (2025) *[Also in 2.1, 2.2]*
 
-### 2.5 Egocentric Vision and Self-Logging (8 papers)
+### 2.5 Egocentric Vision and Self-Logging (7 papers)
 - **027** SenseCam: A Wearable Camera for Lifelogging (2006)
 - **037** MyLifeBits (2000s)
 - **020** EPIC-KITCHENS: Large-Scale Dataset for Egocentric Activity Recognition (2021)
 - **019** Ego4D: Around the World in 3,000 Hours of Egocentric Video (2022)
-- **021** MDGEAR: Multi-Modal Egocentric Activity Recognition (2024) *[Also in 2.4]*
 - **003** VideoAgent: A Memory-Augmented Multimodal Agent (2025) *[Also in 2.3]*
 - **008** Mem2Ego: Egocentric Memory for Personalized Agents (2025) *[Also in 2.3]*
 - **036** EgoLog (2026)
@@ -123,18 +121,19 @@
 ### Others (1 paper)
 - **014** Autobiographical Design (Neustaedter & Sengers, 2012) - Methodology
 
-**Deleted Papers (Not Verifiable):**
-- **024** Face Obfuscation (2023/24) - Privacy [DELETED]
-- **025** Text Detection (2023) - Privacy [DELETED]
-- **026** Energy-Efficient Mobile Sensing (2023) - Systems [DELETED]
-- **028** Privacy Concerns in Personalized Systems (2023) - HCI [DELETED]
-- **029** Why Did You Say That? (2024) - HCI [DELETED]
-- **030** Trust in Long-Term AI Companions (2023/24) - HCI [DELETED]
-- **031** Emotional Bonds with AI Assistants (2024) - HCI [DELETED]
-- **032** Theoretical Framework for User Modeling (2023) - Theory [DELETED]
-- **033** Theory of Mind in AI Agents (2023) - Theory [DELETED]
-- **034** The Personalization Paradox (2024) - Theory [DELETED]
-- **035** Ethics of Deep User Understanding (2023/24) - Ethics [DELETED]
+**Deleted Papers:**
+- **021** MDGEAR (2024) - Multimodal Egocentric [DELETED - Not relevant to thesis topic]
+- **024** Face Obfuscation (2023/24) - Privacy [DELETED - Not verifiable]
+- **025** Text Detection (2023) - Privacy [DELETED - Not verifiable]
+- **026** Energy-Efficient Mobile Sensing (2023) - Systems [DELETED - Not verifiable]
+- **028** Privacy Concerns in Personalized Systems (2023) - HCI [DELETED - Not verifiable]
+- **029** Why Did You Say That? (2024) - HCI [DELETED - Not verifiable]
+- **030** Trust in Long-Term AI Companions (2023/24) - HCI [DELETED - Not verifiable]
+- **031** Emotional Bonds with AI Assistants (2024) - HCI [DELETED - Not verifiable]
+- **032** Theoretical Framework for User Modeling (2023) - Theory [DELETED - Not verifiable]
+- **033** Theory of Mind in AI Agents (2023) - Theory [DELETED - Not verifiable]
+- **034** The Personalization Paradox (2024) - Theory [DELETED - Not verifiable]
+- **035** Ethics of Deep User Understanding (2023/24) - Ethics [DELETED - Not verifiable]
 
 ### Others Sub-categories
 
@@ -181,12 +180,11 @@
 - 042 MEMENTO
 - 045 Memoria
 
-### 2024 (9 papers)
+### 2024 (8 papers)
 - 006 MARC
 - 006b On-Device AI
 - 007 VLM Survey
 - 011 Mem0
-- 021 MDGEAR
 - 029 Why Did You Say That?
 - 031 Emotional Bonds
 - 034 Personalization Paradox
@@ -245,40 +243,40 @@
 9. **038 Personalization: A Taxonomy** (2000) - Foundational personalization theory
 10. **011 Mem0** (He et al., 2024) - Production memory system
 
-### Tier 2: Should Read (Supporting Papers - 14 papers)
+### Tier 2: Should Read (Supporting Papers - 13 papers)
 11. **008 Mem2Ego** (2025) - Egocentric memory
 12. **003 VideoAgent** (2025) - Video understanding
 13. **015 Generative Agents** (Park et al., 2023) - Agent simulation
 14. **018 OpenCLAW** (Steinberger, 2025) - Production system example
 15. **022 MemGPT** (2023) - Hierarchical memory
-16. **021 MDGEAR** (2024) - Multimodal fusion
-17. **027 SenseCam** (2006) - Early lifelogging
-18. **036 EgoLog** (2026) - Latest self-log system
-19. **037 MyLifeBits** (2000s) - Classic lifelogging
-20. **040 Enabling Personalized Long-term Interactions** (2025) - Long-term agents
-21. **043 Soar** (1987) - Cognitive architecture foundation
-22. **044 ACT-R** (1993) - Activation-based memory
-23. **045 Memoria** (2025) - Scalable agentic memory
-24. **023 O-Mem** (2025) - Omni memory system
+16. **027 SenseCam** (2006) - Early lifelogging
+17. **036 EgoLog** (2026) - Latest self-log system
+18. **037 MyLifeBits** (2000s) - Classic lifelogging
+19. **040 Enabling Personalized Long-term Interactions** (2025) - Long-term agents
+20. **043 Soar** (1987) - Cognitive architecture foundation
+21. **044 ACT-R** (1993) - Activation-based memory
+22. **045 Memoria** (2025) - Scalable agentic memory
+23. **023 O-Mem** (2025) - Omni memory system
 
-### Tier 3: Nice to Have (Background Papers - 21 papers)
+### Tier 3: Nice to Have (Background Papers - 20 papers)
 - 002, 005, 006, 006b, 007, 009, 010, 016, 017, 020, 024-035, 039
 
 ---
 
 ## Notes
 
-- Total papers: 34 (after cleanup - deleted 11 non-verifiable papers)
-- Papers with PDFs collected: 29
+- Total papers: 33 (after cleanup - deleted 12 papers: 11 non-verifiable + 1 not relevant)
+- Papers with PDFs collected: 30
 - Papers with detailed summaries: 14 (from collected/ folder)
-- Papers with basic info: 20 (from paper_read.md, summaries.md, personalization_lit_review.md)
-- Papers in multiple topics: 8 (001, 003, 005, 008, 012, 021, 041, 042)
+- Papers with basic info: 19 (from paper_read.md, summaries.md, personalization_lit_review.md)
+- Papers in multiple topics: 7 (001, 003, 005, 008, 012, 041, 042)
 
 **Batch 3 Cleanup Summary (2026-03-08):**
 - **Successfully Downloaded:** 3 papers (023 O-Mem, 036 EgoLog, 041 Toward Personalized LLM-Powered Agents)
-- **Unable to Download:** 2 papers (021 MDGEAR - MDPI blocking, 038 Personalization: A Taxonomy - ACM paywall)
+- **Later Downloaded:** 1 paper (038 Personalization: A Taxonomy - obtained by user)
+- **Deleted (Not Relevant):** 1 paper (021 MDGEAR - not relevant to thesis topic)
 - **Deleted (Not Verifiable):** 11 papers (024-026, 028-035) - these appear to be AI hallucinations
-- **Completion Rate:** 29/34 = 85.3%
+- **Completion Rate:** 30/33 = 90.9%
 
 **Missing Information:**
 - Papers 002, 003, 005, 006, 006b, 007, 008, 009, 010, 022: Need to verify authors
