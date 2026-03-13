@@ -135,40 +135,84 @@ This thesis makes the following contributions:
 
 ### 2. Background & Related Work (3-4 pages)
 
-#### 2.1 Life Logging Systems
-- **Classic:** MyLifeBits (2000s) - Foundation of life logging
-- **Modern:** EgoLog (2026) - HAR-focused, continuous tracking + multimodal sensing
-- **Limitation:** Classification-focused, limited understanding and agent integration
+**Writing Principle:**
+> **Related Work enriches the problem, not demonstrates knowledge.**
 
-#### 2.2 Personalized LLMs & Agents
-- **PLLM Taxonomy** (2025): Input Level (prompting), Model Level (adaptation), Objective Level (alignment)
-- **PRIME** (2025): Cognitive dual-memory (episodic + semantic) + personalized thinking
-- **Persistent Memory Systems** (2025): STM → summaries → LTM → user profile pipeline
-- **Personalized Agents** (2026): Profile modeling, memory, planning, action execution
+Every section should make the reader feel:
+- "This problem is urgent"
+- "Current approaches are limited"  
+- "This thesis fills a critical gap"
 
-#### 2.3 Embodied Agent Memory
-- **MEMENTO** (2026): Knowledge graph-based user profile to address information overload
-- **Generative Agents** (2023): Memory stream + reflection architecture
-- **MemGPT** (2023): Virtual context management, self-editing memory
-- **Modern Systems:** Mem0 (memory-as-a-service), A-MEM (Zettelkasten-inspired), Memoria (weighted knowledge graphs)
+**Narrative Arc:**
+- 2.1: Personal AI agent 是什么 → 需要 personalization
+- 2.2: Personalization 的现状 → 全靠 digital traces
+- 2.3: Memory architecture → pipeline 里没有 physical entry point
+- 2.4: Egocentric perception → 技术成熟但只在 robotics
+- 2.5: Self-logging → 理念存在但从未接入 agent memory
 
-#### 2.4 Cognitive Architectures
-- **Classics:** Soar (1987), ACT-R (1993) - Activation-based retrieval, memory decay
-- **Modern Applications:** OpenClaw's two-tier memory (ephemeral + durable)
-- **Identity Layer:** SOUL.md, USER.md, IDENTITY.md (personality + preferences)
+#### 2.1 From LLM-Based Agents to Personal AI Agents
 
-#### 2.5 Autoethnographic Methods
-- **Autobiographical Design:** Neustaedter & Sengers (2012) - Guidelines for self-study validity
-- **Legitimacy Strategies:** Depth over breadth, insider expertise, transparency, rigor, theoretical contribution, artifact creation
+**Evolution:** LLM-based autonomous agents have proliferated across social simulation, software engineering, and autonomous research. These systems combine profiling, memory, planning, and action into autonomous workflows (A Survey on Large Language Model based Autonomous Agents (Wang et al., 2023); Generative Agents (Park et al., 2023); SWE-Agent (Yang et al., 2024)).
+
+**Definition:** This thesis introduces **personal AI agents**—systems designed for long-term, personalized, diverse-scenario assistance to individual users. Unlike task-bounded agents that terminate after workflows, personal AI agents maintain persistent relationships across domains, adapting to evolving preferences over weeks and months.
+
+**Examples:** Letta, Charlie Mnemonic, PAI, OpenCLAW (Steinberger, 2025), commercial products.
+
+**Pressure Point:** As agents move to persistent deployment, personalization intensifies—continuous agents must infer what users need and learn what not to do, both depending on user model richness.
+
+**Bridge:** What makes personal agents effective? Research points to personalization. But how does it work?
+
+#### 2.2 Personalization for Personal AI Agents
+
+**Model Level:** Researchers explore adapting LLM outputs to reflect individual preferences (A Survey of Personalized Large Language Models (Liu et al., 2025); Measuring What Makes You Unique (Qiu et al., 2025)).
+
+**Agent Level:** Personalization becomes a design problem spanning entire pipeline—profiling, memory, planning, action (Toward Personalized LLM-Powered Agents (Xu et al., 2026)). Shift matters: not what model says, but what agent does.
+
+**Memory Focus:** Recent systems demonstrate persistent memory improves agent performance and personalization (Mem0 (Chhikara et al., 2025); Memoria (Sarin et al., 2025); Enabling Personalized Long-term Interactions (Westhäußer et al., 2025)). Memory is structural for personal AI agents.
+
+**BUT:** Whether model-level or system-level, data source remains the same—digital traces. Personalized prompts draw on chat histories; memory systems extract facts from conversations; user profiles aggregate patterns from tool usage (Mem0; OpenCLAW). **No approach captures the physical world—environment, activity, or state.**
+
+#### 2.3 Memory Architectures for Personalization
+
+**Three-Stage Pipeline:** Current memory systems share common architecture:
+
+**Ingestion:** LLM-based extraction from conversation transcripts, tool calls, API responses (Mem0; MemGPT (Packer et al., 2023)). Input is textual by design—no perception channel for physical-world observation.
+
+**Storage:** Organized into vector databases, knowledge graphs, or markdown files (Mem0; Memoria; OpenCLAW)—all storing digital interaction information.
+
+**Retrieval:** Hybrid strategies (keyword + vector similarity) surface relevant memories (MemGPT).
+
+**Gap:** Pipeline optimized for digital traces. **Ingestion interface has no entry point for physical-world data—not oversight, but unchallenged design assumption: user's digital surface is only surface worth modeling.**
+
+#### 2.4 Egocentric Perception
+
+**Technology Exists:** Egocentric vision—first-person video from mounted cameras—has matured with large-scale benchmarks (Ego4D (Grauman et al., 2022); Ego-Exo4D (Grauman et al., 2024)).
+
+**Vision-Language Models:** Convert visual streams into structured representations—persistent object memory, temporal reasoning, real-time dialogue (Embodied VideoAgent (Fan et al., 2025); EgoLife (Yang et al., 2025); Vinci (Pei et al., 2025)). Pipeline from observation to structured output is viable.
+
+**BUT:** Work pursues two objectives, neither personalization:
+1. **Environment models for agent action**—navigation, manipulation (Embodied VideoAgent)
+2. **Queryable records for human memory**—users review what happened (EgoLife; Vinci)
+
+**Unexplored:** Feeding egocentric observation into agent's memory pipeline as personalization source.
+
+#### 2.5 Self-Logging
+
+**Long History:** Wearable/ambient devices record daily life—automatic photography, full-spectrum archiving (Memex (Bush, 1945); MyLifeBits (Gemmell et al., 2006); SenseCam (Hodges et al., 2006)). Recent work uses LLMs to reason over wearable health data (PHIA (Coravos et al., 2026)).
+
+**Goal Throughout:** Human memory augmentation—helping people recall their past, answer their questions. Data stored for person to review, not for AI to act on.
+
+**Gap:** No lifelogging system feeds captured data into agent's memory pipeline to improve autonomous decision-making or personalization.
 
 #### 2.6 Research Gap
-**Missing in existing work:**
-1. **Long-term self-study** of life logging + agent memory (most are short-term user studies or n=1 demos)
-2. **Integration** of cognitive theory + agent memory + personalization in embodied context
-3. **Privacy-by-design** life logging system with formal evaluation
-4. **Understanding beyond classification** - proactive agent vs passive recorder
 
-**This thesis addresses:** All four gaps through system artifact + longitudinal self-study + design implications
+**What's Missing:**
+1. **Physical world input** in personalization (all approaches use digital traces only)
+2. **Entry point in memory architectures** for continuous egocentric observation
+3. **Agent integration** of egocentric perception (current work focuses on robotics or human review)
+4. **Personalization through embodied observation** (self-logging never connects to agents)
+
+**This Thesis Bridges:** All four gaps by integrating egocentric vision into personal AI agent memory pipeline, asking: what value, if any, does physical-world observation provide for personalization?
 
 ---
 
