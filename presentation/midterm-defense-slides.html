@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thesis Midterm Defense - Chris Wu</title>
+    <style>
+        /* Scroll snap for navigation */
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+        }
+        
+        .slide {
+            height: 100vh;
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+            box-sizing: border-box;
+            position: relative;
+        }
+        
+        /* Theme: Dark (default) */
+        body {
+            background: #000;
+            color: #fff;
+            transition: 0.3s;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+        
+        /* Theme: Light */
+        body.light {
+            background: #fff;
+            color: #000;
+        }
+        
+        /* Responsive typography */
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            margin: 0.5rem 0;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            margin: 0.3rem 0;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.3;
+        }
+        
+        h3 {
+            font-size: clamp(1.4rem, 3vw, 2.2rem);
+            margin: 0.3rem 0;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        p {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            margin: 0.5rem 0;
+            text-align: center;
+            line-height: 1.6;
+            max-width: 900px;
+        }
+        
+        ul {
+            font-size: clamp(1rem, 2vw, 1.5rem);
+            text-align: left;
+            line-height: 1.8;
+            max-width: 800px;
+        }
+        
+        li {
+            margin: 0.8rem 0;
+        }
+        
+        .subtitle {
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+            font-weight: 300;
+            opacity: 0.9;
+            margin: 0.5rem 0;
+        }
+        
+        .meta {
+            font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+            opacity: 0.7;
+            margin-top: 1rem;
+        }
+        
+        .highlight {
+            color: #C41E3A;
+            font-weight: 600;
+        }
+        
+        .small {
+            font-size: clamp(0.85rem, 1.3vw, 1.1rem);
+        }
+        
+        /* Two column layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1100px;
+            width: 100%;
+        }
+        
+        .column {
+            text-align: left;
+        }
+        
+        /* Table styles */
+        table {
+            font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+            border-collapse: collapse;
+            margin: 1rem auto;
+            max-width: 900px;
+        }
+        
+        th, td {
+            padding: 0.8rem 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid currentColor;
+            opacity: 0.85;
+        }
+        
+        th {
+            font-weight: 600;
+            opacity: 1;
+        }
+        
+        /* Progress bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: currentColor;
+            opacity: 0.7;
+            z-index: 1000;
+            transition: width 0.1s;
+        }
+        
+        /* Theme toggle */
+        .theme-toggle {
+            position: fixed;
+            top: 1.5rem;
+            right: 1.5rem;
+            z-index: 1000;
+            background: transparent;
+            border: 2px solid currentColor;
+            color: currentColor;
+            font-size: 1.5rem;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .theme-toggle:hover {
+            opacity: 0.7;
+        }
+        
+        /* Slide number */
+        .slide-number {
+            position: absolute;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            font-size: clamp(0.8rem, 1.2vw, 1rem);
+            opacity: 0.5;
+        }
+        
+        /* Architecture diagram */
+        .architecture {
+            font-family: 'Courier New', monospace;
+            font-size: clamp(0.85rem, 1.4vw, 1.1rem);
+            text-align: center;
+            line-height: 1.8;
+            margin: 1.5rem 0;
+        }
+        
+        .layer-box {
+            border: 2px solid currentColor;
+            padding: 1.2rem 2rem;
+            margin: 0.8rem 0;
+            max-width: 700px;
+        }
+        
+        .arrow {
+            font-size: 2rem;
+            margin: 0.3rem 0;
+        }
+        
+        /* Status indicators */
+        .status {
+            display: inline-block;
+            margin-left: 0.5rem;
+        }
+        
+        .done { color: #4CAF50; }
+        .progress { color: #FFC107; }
+        .pending { color: #9E9E9E; }
+    </style>
+</head>
+<body>
+    <div class="progress-bar"></div>
+    <button class="theme-toggle" onclick="toggleTheme()">◐</button>
+    
+    <!-- SLIDE 1: Title -->
+    <section class="slide">
+        <h1>Physical-World Observation for Personal AI Agent Personalization</h1>
+        <p class="subtitle">Towards More Physical-Aware Personalization</p>
+        <div style="margin-top: 2rem;">
+            <p><strong>Chris Wu</strong></p>
+            <p class="meta">Carnegie Mellon University</p>
+            <p class="meta">March 2026</p>
+        </div>
+        <div class="slide-number">1</div>
+    </section>
+    
+    <!-- SLIDE 2: Opening -->
+    <section class="slide">
+        <h1>Personal AI Agents Are Here</h1>
+        <h2 style="margin-top: 1.5rem; opacity: 0.8;">Deployed. Persistent. Real.</h2>
+        <div style="margin-top: 2rem; text-align: center;">
+            <p style="font-size: 1.8rem; font-weight: 300;">OpenCLAW • Letta • PAI</p>
+            <p class="meta" style="margin-top: 1rem;">Production systems running continuously</p>
+            <p class="highlight" style="margin-top: 1.5rem; font-size: 1.4rem;">This is happening now</p>
+        </div>
+        <div class="slide-number">2</div>
+    </section>
+    
+    <!-- SLIDE 3: Tension Point -->
+    <section class="slide">
+        <h1>But They're Blind</h1>
+        <h2 style="margin-top: 1.5rem;">Personalization = Digital Traces Only</h2>
+        <div class="two-column" style="margin-top: 2.5rem;">
+            <div class="column">
+                <h3 style="text-align: left;">What they have:</h3>
+                <ul>
+                    <li>Chats</li>
+                    <li>Calendars</li>
+                    <li>Files</li>
+                </ul>
+            </div>
+            <div class="column">
+                <h3 style="text-align: left;">What they lack:</h3>
+                <ul>
+                    <li>Where you are</li>
+                    <li>What you're doing</li>
+                    <li>Your state</li>
+                </ul>
+            </div>
+        </div>
+        <p class="highlight" style="margin-top: 2rem; font-size: 1.3rem;">Agents personalize from half the picture</p>
+        <div class="slide-number">3</div>
+    </section>
+    
+    <!-- SLIDE 4: Concrete Example -->
+    <section class="slide">
+        <h2>When Blindness Breaks Trust</h2>
+        <h1 style="margin-top: 0.5rem; font-size: 3.5rem;">3pm Focus Work</h1>
+        <table style="margin-top: 2rem;">
+            <tr>
+                <th style="width: 35%;">Agent sees:</th>
+                <td>Meeting at 4pm</td>
+            </tr>
+            <tr>
+                <th>Agent doesn't see:</th>
+                <td>Deep focus state<br>No break in 3 hours</td>
+            </tr>
+            <tr>
+                <th>Agent action:</th>
+                <td>Sends recommendation</td>
+            </tr>
+            <tr>
+                <th>Result:</th>
+                <td class="highlight" style="font-weight: 600;">Disrupts most productive hour</td>
+            </tr>
+        </table>
+        <p class="meta" style="margin-top: 1.5rem; font-size: 1.2rem;">Information without context → Wrong action</p>
+        <div class="slide-number">4</div>
+    </section>
+    
+    <!-- SLIDE 5: Research Gap -->
+    <section class="slide">
+        <h1>The Missing Piece</h1>
+        <table style="margin-top: 2rem; font-size: 1.1rem;">
+            <tr>
+                <th>Dimension</th>
+                <th>Status</th>
+                <th>Gap</th>
+            </tr>
+            <tr>
+                <td>Personalization</td>
+                <td>Digital-only ✓</td>
+                <td>Physical-world input</td>
+            </tr>
+            <tr>
+                <td>Memory Architectures</td>
+                <td>Text-based ✓</td>
+                <td>Sensing entry point</td>
+            </tr>
+            <tr>
+                <td>Egocentric Vision</td>
+                <td>Mature tech ✓</td>
+                <td>Agent integration</td>
+            </tr>
+            <tr>
+                <td>Self-Logging</td>
+                <td>Human review ✓</td>
+                <td>Agent memory connection</td>
+            </tr>
+        </table>
+        <h2 class="highlight" style="margin-top: 2rem;">No one has connected them</h2>
+        <div class="slide-number">5</div>
+    </section>
+    
+    <!-- SLIDE 6: Research Questions -->
+    <section class="slide">
+        <h1>What I'm Exploring</h1>
+        <div style="text-align: left; max-width: 850px; margin-top: 2rem;">
+            <p style="text-align: left; margin: 1.5rem 0; font-size: 1.3rem;"><strong>RQ1:</strong> What physical-world information becomes visible that digital traces miss?</p>
+            <p style="text-align: left; margin: 1.5rem 0; font-size: 1.3rem;"><strong>RQ2:</strong> When does it help vs. hurt personalization?</p>
+            <p style="text-align: left; margin: 1.5rem 0; font-size: 1.3rem;"><strong>RQ3:</strong> What design requirements emerge?</p>
+        </div>
+        <div class="slide-number">6</div>
+    </section>
+    
+    <!-- SLIDE 7: Approach -->
+    <section class="slide">
+        <h1>Not Proving—Discovering</h1>
+        <h2 style="margin-top: 1rem; opacity: 0.8;">Exploratory Autoethnography</h2>
+        <ul style="margin-top: 2rem;">
+            <li>2-week self-study</li>
+            <li>Continuous egocentric capture</li>
+            <li>Agent interaction logs</li>
+            <li>Daily reflections</li>
+        </ul>
+        <p class="meta" style="margin-top: 1.5rem;">Validated methodology (Neustaedter & Sengers, 2012)</p>
+        <div class="slide-number">7</div>
+    </section>
+    
+    <!-- SLIDE 8: Design Decision 1 -->
+    <section class="slide">
+        <h1>Why Egocentric Vision?</h1>
+        <div style="text-align: left; max-width: 800px; margin-top: 2rem;">
+            <h3 style="text-align: left; margin-bottom: 0.5rem;">1. Mobility</h3>
+            <p style="text-align: left; margin-left: 1.5rem; opacity: 0.85;">Moves with wearer • Continuous capture anywhere</p>
+            
+            <h3 style="text-align: left; margin: 1.2rem 0 0.5rem;">2. First-Person Perspective</h3>
+            <p style="text-align: left; margin-left: 1.5rem; opacity: 0.85;">Matches user attention • What user sees and does</p>
+            
+            <h3 style="text-align: left; margin: 1.2rem 0 0.5rem;">3. Privacy-Utility Balance</h3>
+            <p style="text-align: left; margin-left: 1.5rem; opacity: 0.85;">On-device filtering • No cloud dependency</p>
+        </div>
+        <p class="small meta" style="margin-top: 1.5rem;">Alternatives: Ambient sensors ✗ Third-person cameras ✗ Smartphone logs ✗</p>
+        <div class="slide-number">8</div>
+    </section>
+    
+    <!-- SLIDE 9: Design Decision 2 -->
+    <section class="slide">
+        <h1>Why OpenCLAW?</h1>
+        <div style="text-align: left; max-width: 800px; margin-top: 2rem;">
+            <h3 style="text-align: left; margin-bottom: 0.5rem;">1. Production-Grade</h3>
+            <p style="text-align: left; margin-left: 1.5rem; opacity: 0.85;">Real constraints • Not a toy system</p>
+            
+            <h3 style="text-align: left; margin: 1.2rem 0 0.5rem;">2. Transparent Memory</h3>
+            <p style="text-align: left; margin-left: 1.5rem; opacity: 0.85;">Plain markdown • Fully inspectable</p>
+            
+            <h3 style="text-align: left; margin: 1.2rem 0 0.5rem;">3. Markdown Alignment</h3>
+            <p style="text-align: left; margin-left: 1.5rem; opacity: 0.85;">VLM → Text → Markdown • No conversion</p>
+        </div>
+        <p class="highlight" style="margin-top: 1.5rem; font-size: 1.2rem;">Simple pipeline, natural fit</p>
+        <div class="slide-number">9</div>
+    </section>
+    
+    <!-- SLIDE 10: Architecture (KEY) -->
+    <section class="slide">
+        <h1>System Architecture</h1>
+        <h2 style="margin-top: 0.3rem; opacity: 0.7; font-size: 1.8rem;">Three Layers, One Pipeline</h2>
+        
+        <div class="architecture" style="margin-top: 1.5rem;">
+            <div class="layer-box">
+                <strong>LAYER 1: CAPTURE</strong><br>
+                Egocentric video • Privacy filtering (on-device) • Sensor selection
+            </div>
+            <div class="arrow">↓</div>
+            <div class="layer-box">
+                <strong>LAYER 2: PROCESS</strong><br>
+                VLM extraction • Activity recognition • Text summarization
+            </div>
+            <div class="arrow">↓</div>
+            <div class="layer-box">
+                <strong>LAYER 3: MEMORY</strong><br>
+                OpenCLAW integration • Markdown storage • Cross-modal indexing
+            </div>
+        </div>
+        
+        <p class="highlight" style="margin-top: 1.5rem; font-size: 1.2rem;">Key Innovation: Physical-world → Text → Markdown</p>
+        <div class="slide-number">10</div>
+    </section>
+    
+    <!-- SLIDE 11: Methodology -->
+    <section class="slide">
+        <h1>How I'll Answer</h1>
+        <h2 style="margin-top: 0.5rem; opacity: 0.8; font-size: 1.8rem;">Autoethnographic Self-Study</h2>
+        
+        <div class="two-column" style="margin-top: 2rem;">
+            <div class="column">
+                <h3 style="text-align: left; margin-bottom: 1rem;">Duration</h3>
+                <p style="text-align: left; font-size: 1.3rem;">2 weeks continuous capture</p>
+            </div>
+            <div class="column">
+                <h3 style="text-align: left; margin-bottom: 1rem;">Analysis</h3>
+                <p style="text-align: left; font-size: 1.1rem;">What was captured?<br>When was it queried?<br>Did it help or hurt?</p>
+            </div>
+        </div>
+        
+        <p class="meta" style="margin-top: 1.5rem; font-size: 1.1rem;">Data sources: Egocentric video, Agent logs, Daily reflections</p>
+        <div class="slide-number">11</div>
+    </section>
+    
+    <!-- SLIDE 12: Contributions -->
+    <section class="slide">
+        <h1>Expected Contributions</h1>
+        
+        <div style="text-align: left; max-width: 850px; margin-top: 2rem;">
+            <h3 style="text-align: left; margin-bottom: 0.5rem;">1. Empirical Findings</h3>
+            <p style="text-align: left; margin-left: 1.5rem; opacity: 0.85; font-size: 1.05rem;">Where physical context aids • Where it introduces noise • Design patterns</p>
+            
+            <h3 style="text-align: left; margin: 1.2rem 0 0.5rem;">2. System Artifact</h3>
+            <p style="text-align: left; margin-left: 1.5rem; opacity: 0.85; font-size: 1.05rem;">Egocentric + OpenCLAW integration • Privacy-preserving pipeline • Open-source</p>
+            
+            <h3 style="text-align: left; margin: 1.2rem 0 0.5rem;">3. Design Implications</h3>
+            <p style="text-align: left; margin-left: 1.5rem; opacity: 0.85; font-size: 1.05rem;">Storage granularity • Privacy trade-offs • Abstraction mechanisms</p>
+        </div>
+        <div class="slide-number">12</div>
+    </section>
+    
+    <!-- SLIDE 13: Timeline -->
+    <section class="slide">
+        <h1>Progress & Plan</h1>
+        
+        <table style="margin-top: 2rem; font-size: 1.1rem;">
+            <tr>
+                <td>Introduction & Related Work</td>
+                <td><span class="status done">✓</span></td>
+            </tr>
+            <tr>
+                <td>Design Rationale</td>
+                <td><span class="status done">✓</span></td>
+            </tr>
+            <tr>
+                <td>Methodology</td>
+                <td><span class="status done">✓</span></td>
+            </tr>
+            <tr>
+                <td>System Implementation</td>
+                <td><span class="status progress">⟳</span></td>
+            </tr>
+            <tr>
+                <td>2-Week Experiment</td>
+                <td><span class="status pending">Mar 18-31</span></td>
+            </tr>
+            <tr>
+                <td>Analysis & Writing</td>
+                <td><span class="status pending">Apr 1-7</span></td>
+            </tr>
+        </table>
+        
+        <p class="highlight" style="margin-top: 1.5rem; font-size: 1.2rem;">Defense: March 23, 2026</p>
+        <div class="slide-number">13</div>
+    </section>
+    
+    <!-- SLIDE 14: Summary -->
+    <section class="slide">
+        <h1>Summary</h1>
+        <ul style="margin-top: 2rem; text-align: left; max-width: 800px;">
+            <li>Personal agents limited to <strong>digital traces</strong></li>
+            <li>Physical-world observation could <strong>bridge the gap</strong></li>
+            <li>Exploratory study to <strong>discover value</strong></li>
+            <li>System artifact for <strong>integration</strong></li>
+        </ul>
+        
+        <h2 style="margin-top: 2.5rem; font-size: 2.5rem;">Questions?</h2>
+        
+        <p class="meta" style="margin-top: 1.5rem; font-size: 1rem;">chriswu@cmu.edu</p>
+        <div class="slide-number">14</div>
+    </section>
+    
+    <script>
+        // Progress bar
+        window.addEventListener('scroll', () => {
+            const percent = (scrollY / (document.body.scrollHeight - innerHeight)) * 100;
+            document.querySelector('.progress-bar').style.width = percent + '%';
+        });
+        
+        // Theme toggle
+        function toggleTheme() {
+            document.body.classList.toggle('light');
+        }
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                window.scrollBy(0, window.innerHeight);
+            } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                e.preventDefault();
+                window.scrollBy(0, -window.innerHeight);
+            }
+        });
+    </script>
+</body>
+</html>
