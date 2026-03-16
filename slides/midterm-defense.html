@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thesis Presentation - Chris Wu</title>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/black.min.css">
+    <style>
+        :root {
+            --r-main-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            --r-heading-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            --r-main-font-size: 32px;
+            --r-heading1-size: 2.2em;
+            --r-heading2-size: 1.6em;
+            --r-heading3-size: 1.2em;
+            --r-main-color: #f5f5f5;
+            --r-heading-color: #fff;
+            --r-link-color: #64b5f6;
+            --accent: #ff6b6b;
+        }
+        .reveal h1, .reveal h2, .reveal h3 { font-weight: 600; }
+        .reveal h2 { color: var(--accent); margin-bottom: 0.5em; }
+        .reveal ul { margin-left: 1em; }
+        .reveal li { margin: 0.4em 0; }
+        .reveal .highlight { color: var(--accent); font-weight: 600; }
+        .reveal .subdued { opacity: 0.6; font-size: 0.85em; }
+        .reveal .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2em; }
+        .reveal table { font-size: 0.75em; margin: 1em 0; width: 100%; }
+        .reveal th { text-align: left; border-bottom: 2px solid var(--accent); padding: 0.5em; }
+        .reveal td { padding: 0.5em; border-bottom: 1px solid #333; }
+        .reveal .rq-box { 
+            background: rgba(255,107,107,0.1); 
+            border-left: 4px solid var(--accent); 
+            padding: 1em 1.5em; 
+            margin: 0.5em 0;
+            text-align: left;
+        }
+        .reveal .layer-box {
+            background: rgba(100,181,246,0.1);
+            border-radius: 8px;
+            padding: 1em;
+            margin: 0.5em 0;
+        }
+        .reveal .arrow { color: var(--accent); font-size: 1.5em; }
+        .title-slide h1 { font-size: 1.4em; }
+        .title-slide .subtitle { font-size: 0.7em; opacity: 0.7; margin-top: 0.5em; }
+        .title-slide .author { margin-top: 2em; font-size: 0.8em; }
+        .emoji { font-style: normal; }
+    </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- ========== TITLE ========== -->
+<section class="title-slide">
+    <h1>Physical-World Observation for Personal AI Agent Personalization</h1>
+    <p class="subtitle">Towards More Physical-Aware Personalization</p>
+    <p class="author">Chris Wu · March 2026</p>
+</section>
+
+<!-- ========== MOTIVATION: Agents Are Here ========== -->
+<section>
+    <h2>Personal AI Agents Are Here</h2>
+    <p style="font-size: 1.5em;">OpenClaw, Claude, ChatGPT, Cursor...</p>
+    <p class="subdued">Agents that help with your daily life and work</p>
+    <aside class="notes">Show OpenClaw usage / demo if needed</aside>
+</section>
+
+<!-- ========== MOTIVATION: Why Personalization ========== -->
+<section>
+    <h2>Why Personalization Matters</h2>
+    <div class="two-col">
+        <div>
+            <p><span class="highlight">Generic Agent</span></p>
+            <p class="subdued">Similar behavior for everyone</p>
+        </div>
+        <div>
+            <p><span class="highlight">Personalized Agent</span></p>
+            <p class="subdued">Adapts, learns, evolves with you</p>
+        </div>
+    </div>
+    <p style="margin-top: 1em;"><strong>Personalization = Effectiveness</strong></p>
+    <ul>
+        <li>Know what you like → Better recommendations</li>
+        <li>Know what you don't like → Fewer interruptions</li>
+        <li>Know what you need → Proactive help</li>
+    </ul>
+</section>
+
+<!-- ========== MOTIVATION: The Blindness Problem ========== -->
+<section>
+    <h2>The Blindness Problem</h2>
+    <p><span class="highlight">Current Personalization is Limited</span></p>
+    <div class="two-col">
+        <div>
+            <p><strong>What agents have:</strong></p>
+            <ul>
+                <li>Chat history</li>
+                <li>Calendar events</li>
+                <li>Files & documents</li>
+            </ul>
+        </div>
+        <div>
+            <p><strong>What agents lack:</strong></p>
+            <ul>
+                <li>Where you are</li>
+                <li>What you're doing</li>
+                <li>Your physical state</li>
+            </ul>
+        </div>
+    </div>
+    <p style="margin-top: 1em; font-size: 1.1em;">Agents personalize from <span class="highlight">half the picture</span></p>
+</section>
+
+<!-- ========== RESEARCH GAP ========== -->
+<section>
+    <h2>Research Gap</h2>
+    <table>
+        <tr><th>Dimension</th><th>Current Status</th><th>Missing</th></tr>
+        <tr><td>Personalization</td><td>Digital-only</td><td>Physical-world input</td></tr>
+        <tr><td>Memory Architectures</td><td>Text-based, symbolic</td><td>Continuous sensing entry</td></tr>
+        <tr><td>Egocentric Vision</td><td>Mature (Ego4D, VLMs)</td><td>Agent integration</td></tr>
+        <tr><td>Self-Logging</td><td>Captured for humans</td><td>Agent memory connection</td></tr>
+    </table>
+    <p style="margin-top: 0.5em; font-size: 1.1em;"><span class="highlight">The Gap:</span> No work integrates egocentric perception into agent memory for personalization</p>
+</section>
+
+<!-- ========== RESEARCH QUESTIONS ========== -->
+<section>
+    <h2>Research Questions</h2>
+    <div class="rq-box">
+        <strong>RQ1:</strong> What physical-world information becomes visible through egocentric perception that remains invisible through digital traces alone?
+    </div>
+    <div class="rq-box">
+        <strong>RQ2:</strong> In what contexts does this information improve personalization vs. introduce noise?
+    </div>
+    <div class="rq-box">
+        <strong>RQ3:</strong> What design requirements emerge for integrating continuous sensing into agent memory?
+    </div>
+</section>
+
+<!-- ========== APPROACH ========== -->
+<section>
+    <h2>Approach</h2>
+    <p><span class="highlight">Exploratory + Autoethnographic</span></p>
+    <p style="margin: 1em 0;"><strong>Not assuming — Discovering</strong></p>
+    <ul>
+        <li>Not: Proving physical context helps</li>
+        <li>But: Discovering <em>where</em> it helps and where it doesn't</li>
+    </ul>
+    <p style="margin-top: 1em;"><strong>Autoethnographic Self-Study</strong></p>
+    <ul>
+        <li>7 days continuous capture</li>
+        <li>Design Science Research (artifact + empirical findings)</li>
+    </ul>
+</section>
+
+<!-- ========== DESIGN: Why Egocentric Vision ========== -->
+<section>
+    <h2>Why Egocentric Vision?</h2>
+    <ol>
+        <li><strong>Mobility</strong> — Moves with you, continuous capture across locations<br><span class="subdued">Consumer smart glasses with cameras are going viral</span></li>
+        <li><strong>Information density</strong> — Environment, activity, objects in one channel</li>
+        <li><strong>Implicit attention signal</strong> — What appears = what you engage with</li>
+        <li><strong>Technical maturity</strong> — VLMs can convert video to structured text</li>
+    </ol>
+    <p class="subdued" style="margin-top: 0.5em;">Auxiliary sensors: audio, IMU</p>
+</section>
+
+<!-- ========== DESIGN: Why OpenClaw ========== -->
+<section>
+    <h2>Why OpenClaw?</h2>
+    <ol>
+        <li><strong>Deployed baseline</strong><br><span class="subdued">One of few open-source personal AI agents in sustained real-world use</span></li>
+        <li><strong>Integration opportunity</strong><br><span class="subdued">Personalizes through a workspace of plain markdown files</span></li>
+        <li><strong>Inspectability</strong><br><span class="subdued">Human-readable format, easy to debug and extend</span></li>
+    </ol>
+</section>
+
+<!-- ========== SYSTEM DESIGN ========== -->
+<section>
+    <h2>System Design: Three Layers</h2>
+    <div class="layer-box">
+        <strong>Layer 1: Capture (continuous)</strong><br>
+        <span class="subdued">Egocentric capture → Privacy filtering → Trigger/tags</span>
+    </div>
+    <p class="arrow">↓</p>
+    <div class="layer-box">
+        <strong>Layer 1.5: Pre-Processing (passive)</strong><br>
+        <span class="subdued">Discard junk → Importance scoring → Batch boundary</span>
+    </div>
+    <p class="arrow">↓</p>
+    <div class="layer-box">
+        <strong>Layer 2: Inference (batch)</strong><br>
+        <span class="subdued">VLM API call (video → text) → Observation + annotation</span>
+    </div>
+    <p class="arrow">↓</p>
+    <div class="layer-box">
+        <strong>Layer 3: Memory Integration</strong><br>
+        <span class="subdued">Logs (daily) → Insights (monthly) → Patterns (long-term)</span>
+    </div>
+</section>
+
+<!-- ========== MEMORY ARCHITECTURE ========== -->
+<section>
+    <h2>Memory Tiers</h2>
+    <table>
+        <tr><th>Tier</th><th>File</th><th>Granularity</th></tr>
+        <tr><td>Logs</td><td>physical-logs/YYYY-MM-DD.md</td><td>Daily raw observations</td></tr>
+        <tr><td>Insights</td><td>physical-insights/YYYY-MM.md</td><td>Monthly abstractions</td></tr>
+        <tr><td>Patterns</td><td>physical-pattern.md</td><td>Long-term patterns</td></tr>
+    </table>
+    <p style="margin-top: 1em;"><strong>Layer 3.5: Retrieval</strong></p>
+    <ul>
+        <li>Bootstrap injection (patterns)</li>
+        <li>AGENT.md instruction (insights)</li>
+        <li>On-demand search (logs)</li>
+    </ul>
+</section>
+
+<!-- ========== METHODOLOGY ========== -->
+<section>
+    <h2>Methodology</h2>
+    <p><span class="highlight">Autoethnographic Self-Study</span></p>
+    <p><strong>Duration:</strong> 7 days continuous capture</p>
+    <p style="margin-top: 1em;"><strong>Data Sources:</strong></p>
+    <ul>
+        <li>Egocentric vision (images)</li>
+        <li>Perception logs</li>
+        <li>Memory files</li>
+        <li>Agent interaction transcripts</li>
+        <li>Design iteration logs</li>
+        <li>Daily reflections</li>
+    </ul>
+    <p style="margin-top: 1em;"><strong>Analysis:</strong> What was captured? When queried? Help or hurt?</p>
+</section>
+
+<!-- ========== EXPECTED CONTRIBUTIONS ========== -->
+<section>
+    <h2>Expected Contributions</h2>
+    <div class="two-col">
+        <div>
+            <p><span class="highlight">1. Empirical Findings</span></p>
+            <ul>
+                <li>Where physical context aids personalization</li>
+                <li>Where it introduces noise</li>
+                <li>Design patterns for effective use</li>
+            </ul>
+        </div>
+        <div>
+            <p><span class="highlight">2. System Artifact</span></p>
+            <ul>
+                <li>Egocentric vision + OpenClaw integration</li>
+                <li>Privacy-preserving pipeline</li>
+                <li>Open-source implementation</li>
+            </ul>
+        </div>
+    </div>
+    <p style="margin-top: 1em;"><span class="highlight">3. Design Implications</span></p>
+    <ul>
+        <li>Storage granularity (text vs. key frames)</li>
+        <li>Privacy trade-offs (retention policies)</li>
+        <li>Abstraction mechanisms (real-time vs. nightly)</li>
+    </ul>
+</section>
+
+<!-- ========== THANK YOU ========== -->
+<section>
+    <h2>Thank You</h2>
+    <p style="font-size: 1.2em;">Questions?</p>
+    <p class="subdued" style="margin-top: 2em;">Chris Wu · March 2026</p>
+</section>
+
+</div>
+</div>
+<script>Reveal.initialize({ hash: true, slideNumber: true, transition: 'slide' });</script>
+</body>
+</html>
