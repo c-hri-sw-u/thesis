@@ -8,9 +8,9 @@ The design space is NOT a standalone chapter. It is the argumentative backbone o
 
 - **4.1 Pipeline Overview** — Architecture diagram + one-page data flow (capture → preprocess → inference → memory)
 - **4.2 Capture Layer** — Vision + Audio + IMU roles, dual role distinction (trigger vs. data source), adaptive interval capture reasoning
-- **4.3 Preprocessing** — Why preprocess (token cost, info density), two-stage batch boundary design (sensor trigger + SSIM visual verification), frame filtering with importance scoring
+- **4.3 Preprocessing** — Why preprocess (token cost, info density), two-stage batch boundary design (sensor trigger + similarity verification), frame filtering with importance scoring
 - **4.4 Inference** — Why batch over per-frame (design argument to exclude Path A), VLM prompt design, output format
-- **4.5 Memory Integration** — Direct write strategy (three-tier: physical-logs / physical-insights / physical-pattern.md), three-tier visibility mapping (bootstrap injection / session-start read / on-demand retrieval), nightly summarization, retention policy
+- **4.5 Memory Integration** — Direct write strategy (three-tier: physical-logs / physical-insights / physical-pattern.md), three-tier visibility mapping (bootstrap injection / session-start read / on-demand retrieval), two distinct update mechanisms: (1) rolling intra-day insight updates triggered by insight_min_batches / insight_min_minutes; (2) nightly pattern update at nightly_hour, retention policy
 - **4.6 Implementation** — Tech stack, hardware, timeline
 
 ## Writing Pattern Per Decision Point
@@ -26,5 +26,7 @@ Do NOT exhaustively enumerate every option with equal depth. The chosen path get
 
 - **Path A (per-frame inference) does not need to be implemented.** Exclude via design argument (inferior information density, higher API cost, no cross-frame reasoning). This is legitimate in RtD.
 - **Path B is the sole implementation path.** Within Path B, not every sub-option needs empirical testing. Most decisions are justified by design reasoning alone.
-- **Experiment variables (marked 🧪 in design-space.md)** are the subset of decisions explored during the study: adaptive interval max_interval and ramp curve, SSIM threshold, batch max window size, importance score weights, prompt wording, nightly summarization prompt wording and pattern file presence vs. absence, proactive cron frequency, transcription on/off. These produce findings for RQ3.
+- **Experiment variables (marked 🧪 in implementation-PathB-v3.md)** are the subset of decisions explored during the study. Distinguish between two tiers:
+  - **Actively experimented** (produce findings for RQ3): maxInterval, rampRatio, ssimBoundaryThreshold, firstBatchWindowSeconds / maxWindowSeconds, importance score weights (wVisual / wAudio / wIMU / wSparsity), dynamic K (kMin / kMax / kDensityPerMin), scoreThreshold, prompt wording, insight_prompt wording, pattern_prompt wording, insight_min_batches / insight_min_minutes, proactive cron frequency
+  - **Tunable but not primary study variables** (set once at study start, not systematically varied): transcriptionEnabled, vadSensitivity, sustainedMotionThreshold, ssimDedupThreshold, nightly_hour
 - **This is Research through Design, not an ablation study.** You do not need to empirically prove every design choice. You need informed decisions with clear reasoning.
